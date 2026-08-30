@@ -30,11 +30,24 @@ By using this software, you warrant that you comply with all applicable internat
 
 ## ⚙️ Operational Modes & Licensing
 
-This software is distributed under a proprietary End-User License Agreement. Please review the full [LICENSE](LICENSE) and [PRIVACY POLICY](PRIVACY.md) before deployment.
+This software is distributed under a proprietary End-User License Agreement. Please review the full [LICENSE](EULA.md) and [PRIVACY POLICY](PRIVACY.md) before deployment.
 
 * **Evaluation Mode (Free):** Strictly for personal use, local testing, and staging/development environments (Non-Production).
    * *Note:* The evaluation version displays informational ASCII art banners in system logs and injects a brief startup delay.
 * **Commercial Mode (Production):** Any deployment in production environments, commercial networks, or for revenue-generating activities requires a valid commercial license key.
+
+---
+
+## 📋 Requirements
+* **Operating System:** Ubuntu 20.04 or newer or equivalent.
+* **Architecture:** x86_64 or ARM64.
+* **Zero Dependencies:** Distributed as a standalone compiled native binary. No JRE/JDK installation is required on the host machine.
+* **RAM:** 134 Mb minimum requires to run.
+
+## Extra Dependencies (Optional)
+* **Database Engine:** PostgreSQL 13+ (Required only if using dynamic database-driven configuration instead of YAML).
+* **Alerting:** A valid Telegram Bot Token and Chat ID (Required only for real-time alerting integration).
+* **Cryptographic Materials:** Valid PKCS#12 (`.p12`) bundles containing your RSA, Prime, or Ed25519 keys for TLS 1.3 operations.
 
 ---
 
