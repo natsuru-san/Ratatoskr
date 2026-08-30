@@ -6,15 +6,15 @@ This repository contains binary distributions of the **Ratatoskr** software. The
 
 ## Technical Metadata (Debian DEP-5 Format)
 * **Upstream-Name:** `Ratatoskr`
-* **Source:** [github.com](https://github.com/natsuru-san/Ratatoskr-service)
+* **Source:** [github](https://github.com/natsuru-san/Ratatoskr)
 
 ### Files Mapping
 
-| Copyright Holder                                                                       | License                                   | Notice / Details                                                             |
-|:---------------------------------------------------------------------------------------|:------------------------------------------|:-----------------------------------------------------------------------------|
-| 2026 Natsuru `<natsuru-san@mail.com>`                                                  | [Ratatoskr-Proprietary-Commercial](#eula) | Main application files.                                                      |
-| 2026 Oracle America, Inc. and/or its affiliates                                        | `Oracle-GFTC-25`                          | Embedded runtime components (Substrate VM / GraalVM Parts).                  |
-| FasterXML, Bouncy Castle, Lombok, HikariCP, PostgreSQL GDG, Liquibase, Mockito, QOS.ch | `Open-Source-Permissive-Manifest`         | Automated tracking manifest for compiled third-party open-source components. |
+| Copyright Holder                                                                       | License                           | Notice / Details                                                             |
+|:---------------------------------------------------------------------------------------|:----------------------------------|:-----------------------------------------------------------------------------|
+| 2026 Natsuru `<natsuru-san@mail.com>`                                                  | [Ratatoskr EULA](EULA.md)         | Main application files.                                                      |
+| 2026 Oracle America, Inc. and/or its affiliates                                        | `Oracle-GFTC-25`                  | Embedded runtime components (Substrate VM / GraalVM Parts).                  |
+| FasterXML, Bouncy Castle, Lombok, HikariCP, PostgreSQL GDG, Liquibase, Mockito, QOS.ch | `Open-Source-Permissive-Manifest` | Automated tracking manifest for compiled third-party open-source components. |
 
 ---
 

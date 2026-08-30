@@ -23,7 +23,7 @@ By using this software, you warrant that you comply with all applicable internat
 * **Pure TLS 1.3 Architecture:** Native and strict support for TLS 1.3 across all encrypted channels.
 * **Flexible Cryptography Topologies:** Encryption can be terminated at the gateway, enforced at the client side, or applied simultaneously using distinct PKCS#12 (`.p12`) identity stores.
 * **Broad Cryptographic Support:** Compatible with **RSA**, **Prime-curve (ECDSA)**, and modern **Ed25519** keys.
-* **Dual-Engine Configuration:** Manage your routing via declarative `YAML` files for static setups, or drive it dynamically via a **PostgreSQL** database.
+* **Dual-Engine Configuration:** Manage your routing via declarative `YAML` file for static setups, or drive it dynamically via a **PostgreSQL** database.
 * **Instant Monitoring:** Built-in integration with **Telegram Bot API** for real-time alerting, health checks, and system notifications.
 
 ---
