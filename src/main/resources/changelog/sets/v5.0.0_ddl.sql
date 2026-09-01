@@ -1,0 +1,1 @@
+ALTER TABLE unit ALTER COLUMN licence TYPE text USING licence::text;

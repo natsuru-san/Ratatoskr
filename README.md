@@ -39,13 +39,14 @@ This software is distributed under a proprietary End-User License Agreement. Ple
 ---
 
 ## 📋 Requirements
-* **Operating System:** Ubuntu 20.04 or newer or equivalent.
+* **Operating System:** Ubuntu 20.04 or newer or Debian.
 * **Architecture:** x86_64 or ARM64.
 * **Zero Dependencies:** Distributed as a standalone compiled native binary. No JRE/JDK installation is required on the host machine.
-* **RAM:** 134 Mb minimum requires to run.
+* **RAM:** 134 Mb minimum requires to run (highly recommended to add '-XX:ParallelGCThreads=1' if your system has 512 mb or less).
 
 ## Extra Dependencies (Optional)
 * **Database Engine:** PostgreSQL 13+ (Required only if using dynamic database-driven configuration instead of YAML).
+   * *Note:* To usage a database use the command `mvn liquibase:update` with prepared environment variables (`DB_LIQUI_SCHEMA=ratatoskr_schema;DB_LIQUI_PASSWORD=pAsSwOrD;DB_LIQUI_PORT=5432;DB_LIQUI_NAME=db_name;DB_LIQUI_HOST=127.0.0.1;DB_LIQUI_USER=db_admin`)
 * **Alerting:** A valid Telegram Bot Token and Chat ID (Required only for real-time alerting integration).
 * **Cryptographic Materials:** Valid PKCS#12 (`.p12`) bundles containing your RSA, Prime, or Ed25519 keys for TLS 1.3 operations.
 

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>karelia.natsuru</groupId>
+    <artifactId>ratatoskr.db</artifactId>
+    <version>5.1.10</version>
+
+    <properties>
+        <maven.compiler.source>25</maven.compiler.source>
+        <maven.compiler.target>25</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <liqui-ver>5.0.4</liqui-ver>
+        <dbName>${env.DB_LIQUI_NAME}</dbName>
+        <dbSchemaName>${env.DB_LIQUI_SCHEMA}</dbSchemaName>
+        <dbHost>${env.DB_LIQUI_HOST}</dbHost>
+        <dbPort>${env.DB_LIQUI_PORT}</dbPort>
+        <dbUsername>${env.DB_LIQUI_USER}</dbUsername>
+        <dbPassword>${env.DB_LIQUI_PASSWORD}</dbPassword>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.7.13</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.liquibase</groupId>
+            <artifactId>liquibase-core</artifactId>
+            <version>${liqui-ver}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.liquibase</groupId>
+                <artifactId>liquibase-maven-plugin</artifactId>
+                <version>${liqui-ver}</version>
+                <configuration>
+                    <driver>org.postgresql.Driver</driver>
+                    <url>jdbc:postgresql://${dbHost}:${dbPort}/${dbName}?currentSchema=${dbSchemaName}</url>
+                    <username>${dbUsername}</username>
+                    <password>${dbPassword}</password>
+                    <changeLogFile>src/main/resources/db/changelog/db.changelog-master.yaml</changeLogFile>
+                    <defaultSchemaName>${dbSchemaName}</defaultSchemaName>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

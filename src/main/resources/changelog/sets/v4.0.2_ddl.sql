@@ -1,0 +1,3 @@
+ALTER TABLE route DROP COLUMN authorities;
+ALTER TABLE route DROP COLUMN target_tls_mutual;
+ALTER TABLE route ADD COLUMN use_system_ca BOOLEAN DEFAULT TRUE NOT NULL;
