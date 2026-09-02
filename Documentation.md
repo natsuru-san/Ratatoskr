@@ -117,4 +117,4 @@ e) To use the configuration you must set db-params to the "*/etc/ratatoskr.yaml*
   * *ratatoskr.db.login*
   * *ratatoskr.db.password*
 
-f) Fill tables with data. All tables are an analog of the YAML-configuration, so you may use the first paragraph (*YAML static configuration*) as a reference.
+f) Fill tables with data. All tables are an analog of the YAML-configuration, so you may use the first paragraph (*YAML static configuration*) as a reference. But there is one exception: a keystore table has a content column instead the path and receives p12-keystores as Base64 text.
