@@ -1,18 +1,13 @@
-## ⚖️ Licensing & Operational Modes
-
-This software is distributed under a proprietary End-User License Agreement (EULA). Please read the full [EULA](EULA.md) and [Privacy Policy](PRIVACY.md) files before downloading or using the software.
-
-* **Evaluation Mode (Free):** Strictly for personal use, local testing, and staging/development environments (Non-Production).
-    * *Note:* The free version includes a startup delay and displays informational ASCII banners in system logs.
-* **Commercial Mode (Production):** Any deployment in production environments, commercial networks, or for revenue-generating activities requires a valid commercial license key.
-
-### 🚫 Export Control Notice
-By using this software, you warrant that you comply with all applicable international export control laws and economic sanctions (including US OFAC, EU, and UK regulations). Use of this software in comprehensive embargoed jurisdictions or by restricted parties is strictly prohibited.
-
-## App description
 # Ratatoskr 🐿️
 
 **Ratatoskr** is a high-performance, omnivorous reverse proxy designed for seamless and secure TCP traffic routing. Named after the legendary messenger of Yggdrasil, it bridges connections with blazing speed, robust TLS 1.3 encryption, and flexible configuration management.
+
+---
+
+References:
+* [Privacy policy](PRIVACY.md)
+* [EULA](EULA.md)
+* [Documentation](Documentation.md)
 
 ---
 
@@ -28,16 +23,6 @@ By using this software, you warrant that you comply with all applicable internat
 
 ---
 
-## ⚙️ Operational Modes & Licensing
-
-This software is distributed under a proprietary End-User License Agreement. Please review the full [LICENSE](EULA.md) and [PRIVACY POLICY](PRIVACY.md) before deployment.
-
-* **Evaluation Mode (Free):** Strictly for personal use, local testing, and staging/development environments (Non-Production).
-   * *Note:* The evaluation version displays informational ASCII art banners in system logs and injects a brief startup delay.
-* **Commercial Mode (Production):** Any deployment in production environments, commercial networks, or for revenue-generating activities requires a valid commercial license key.
-
----
-
 ## 📋 Requirements
 * **Operating System:** Ubuntu 20.04 or newer or Debian.
 * **Architecture:** x86_64 or ARM64.
@@ -46,11 +31,21 @@ This software is distributed under a proprietary End-User License Agreement. Ple
 
 ## Extra Dependencies (Optional)
 * **Database Engine:** PostgreSQL 13+ (Required only if using dynamic database-driven configuration instead of YAML).
-   * *Note:* To usage a database use the command `mvn liquibase:update` with prepared environment variables (`DB_LIQUI_SCHEMA=ratatoskr_schema;DB_LIQUI_PASSWORD=pAsSwOrD;DB_LIQUI_PORT=5432;DB_LIQUI_NAME=db_name;DB_LIQUI_HOST=127.0.0.1;DB_LIQUI_USER=db_admin`)
+   * *Note:* To usage a database use the command `mvn liquibase:update` with prepared environment variables (see [doc](Documentation.md)).
 * **Alerting:** A valid Telegram Bot Token and Chat ID (Required only for real-time alerting integration).
 * **Cryptographic Materials:** Valid PKCS#12 (`.p12`) bundles containing your RSA, Prime, or Ed25519 keys for TLS 1.3 operations.
 
 ---
+
+## ⚖️ Licensing & Operational Modes
+
+This software is distributed under a proprietary End-User License Agreement (EULA). Please read the full [EULA](EULA.md) and [Privacy Policy](PRIVACY.md) files before downloading or using the software.
+
+* **Personal Mode (Free):** Strictly for personal use, local testing, and staging/development environments (Non-Production).
+  * *Note:* The free version displays informational ASCII banners in system logs.
+* **Commercial Mode (Enterprise):** Any deployment in production environments, commercial networks, or for revenue-generating activities requires a valid commercial license key.
+
+Both license modes are technically equals except log ASCII banner in the personal mode. No restrictions, any quantity of routes. We rely on the honesty of our users („• ᴗ •„)
 
 ## 🚫 Export Control Notice
 
