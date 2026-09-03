@@ -128,10 +128,121 @@ The app also contains util functions are helping configuration setting. The list
 
   `ratatoskr --help`
 
-* **Hardware SHA256 printer** shows an identifier encoded into the sha256 string:
+* **Hardware SHA256 printer** shows an identifier encoded into the sha256 string (the real HWID won't be printed!):
 
   `ratatoskr --print-hardware-id`
 
 * **Keystore encoder** prints a base64 string to the adding it in the database column "*keystore.content*":
 
   `ratatoskr --get-encoded-keystore /path/to/keystore.p12`
+
+### 4. Certificate generating
+The paragraph is presented like a short FAQ for personnel using or if you want to trust only your certificates or want to have it. Before certificate generation you have to prepare your OS by installing openssl and openjdk using the command (Ubuntu or Debian) `sudo apt install openssl openjdk-25-jre`. After preparations, you have to define the type of certificates to using. Bellow the instructions is split by heads.
+
+#### a) Ed25519
+
+Make an *openssl.cnf* file and write the text beneath:
+
+```
+[ ca ]
+default_ca = CA_default
+
+[ CA_default ]
+dir = certs
+certs = $dir/certs
+crl_dir = $dir/crl
+database = $dir/index.txt
+new_certs_dir = $dir/newcerts
+certificate = $certs/ca.crt
+private_key = $dir/private/ca_key.pem
+serial = $dir/serial
+crlnumber = $dir/crlnumber
+crl = $dir/crl/crl.pem
+RANDFILE = $dir/private/.rand
+x509_extensions = usr_cert
+name_opt = ca_default
+cert_opt = ca_default
+crl_extensions = crl_ext
+default_days = 365
+default_crl_days= 30
+default_md = sha256
+preserve = no
+policy = policy_match
+
+[ policy_match ]
+countryName = match
+stateOrProvinceName = match
+organizationName = match
+organizationalUnitName = optional
+commonName = supplied
+emailAddress = optional
+
+[ req ]
+default_bits = 2048
+x509_extensions = v3_ca
+string_mask = utf8only
+
+[ v3_ca ]
+subjectKeyIdentifier=hash
+authorityKeyIdentifier=keyid:always
+basicConstraints = critical,CA:true
+keyUsage = critical,digitalSignature,nonRepudiation,keyEncipherment,dataEncipherment,keyAgreement,keyCertSign,cRLSign,encipherOnly,decipherOnly
+
+[ crl_ext ]
+keyUsage = critical,digitalSignature,nonRepudiation,keyEncipherment,dataEncipherment,keyAgreement,keyCertSign,cRLSign,encipherOnly,decipherOnly
+authorityKeyIdentifier=keyid:always
+
+[ intermediate ]
+basicConstraints=critical,CA:TRUE, pathlen:0
+nsCertType = client,server,email,objsign,reserved,sslCA,emailCA,objCA
+keyUsage = critical,digitalSignature,nonRepudiation,keyEncipherment,dataEncipherment,keyAgreement,keyCertSign,cRLSign,encipherOnly,decipherOnly
+subjectKeyIdentifier=hash
+authorityKeyIdentifier=keyid:always
+```
+
+Using the commands generate the main and intermediate authorities. Adjust the `-days` argument to restrict the certificate time life. The commands will ask questions.
+
+```
+mkdir certs
+openssl genpkey -algorithm ed25519 -out certs/ca.key
+openssl req -new -x509 -days 7300 -key certs/ca.key -out certs/ca.pem
+openssl genpkey -algorithm ed25519 -out certs/im.key
+openssl req -new -key certs/im.key -config openssl.cnf -out certs/im.csr
+openssl x509 -req -days 3650 -CA certs/ca.pem -CAkey certs/ca.key -extfile openssl.cnf -extensions intermediate -in certs/im.csr -out certs/im.pem
+touch certs/ca_full.pem
+cat certs/im.pem certs/ca.pem > certs/ca_full.pem
+```
+
+After that add a record to *openssl.cnf* for a certificate which are being to go to use in a route. The block beneath is an example!
+
+```
+[ example_server ]
+basicConstraints=critical, CA:false, pathlen:0
+nsCertType = server
+keyUsage = critical, digitalSignature
+extendedKeyUsage = serverAuth, clientAuth
+subjectKeyIdentifier=hash
+authorityKeyIdentifier=keyid:always
+subjectAltName=DNS:example.com,IP:127.0.0.1
+
+[ example_client ]
+basicConstraints=critical, CA:FALSE, pathlen:0
+nsCertType = client
+keyUsage = critical, digitalSignature
+extendedKeyUsage = critical, clientAuth
+subjectKeyIdentifier=hash
+authorityKeyIdentifier=keyid:always
+```
+
+Now you are being available to generate certificate for your route:
+
+```
+openssl genpkey -algorithm ed25519 -out certs/example_server.key
+openssl req -new -key certs/example_server.key -config openssl.cnf -out certs/example_server.csr
+openssl x509 -req -days 730 -CA certs/im.pem -CAkey certs/im.key -extfile openssl.cnf -extensions example_server -in certs/example_server.csr -out certs/example_server.pem
+openssl pkcs12 -export -out certs/example_server.p12 -inkey certs/example_server.key -in certs/example_server.pem -certfile certs/ca_full.pem
+keytool -importcert -keystore certs/example_server.p12 -storetype PKCS12 -alias root_ca -file certs/ca.pem
+keytool -importcert -keystore certs/example_server.p12 -storetype PKCS12 -alias im_ca -file certs/im.pem
+```
+
+Congratulations! Now you have the PKCS-keystore with RSA certificate chain and key for establishing encrypted route connections
