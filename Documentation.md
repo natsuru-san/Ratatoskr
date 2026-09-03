@@ -28,7 +28,7 @@ b) Next step is a configuring JVM args located in the path "*/usr/lib/ratatoskr/
 
   * If you are the person, and you are going to use this app for self set the *ratatoskr.license* value to `PERSONAL`. Otherwise, you have to contact with author to get a valid license key.
 
-  * The Ratatoskr starting banner is cute, but it may interfere in logs sometimes. To manage it the `ratatoskr.banner` setting can help you. Switch up the setting to `false` and banner is disappearing at the app starting and your logs will be cleaner.
+  * The Ratatoskr starting banner is cute, but it may interfere in logs sometimes. To manage it the *ratatoskr.banner* setting can help you. Switch up the setting to `false` and banner is disappearing at the app starting and your logs will be cleaner.
 
   * Block *ratatoskr.database.enabled* must be set `false`
 
