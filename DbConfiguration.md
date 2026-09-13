@@ -14,19 +14,19 @@
 
   | Column              | Type        | Example value | Description                                                                                              |
   |---------------------|-------------|---------------|----------------------------------------------------------------------------------------------------------|
-  | unit_id             | INT4        | 1             | The link to an id column of the `unit` table                                                             |
+  | unit_id             | INT         | 1             | The link to an id column of the `unit` table                                                             |
   | name                | VARCHAR(64) | MySiteName    | The name of route                                                                                        |
-  | pool_size           | INT2        | 20            | Max count of virtual threads which the route can maintain                                                |
-  | tls_cache_size      | INT4        | 100           | Count of clients the connections of which can be resumed without repeat of heavy handshake               |
-  | tls_cache_timeout   | INT4        | 1800          | Timeout in seconds for clients the connections of which can be resumed without repeat of heavy handshake |
-  | filter_id           | INT4        | 1             | The link to an id column of the `filter` table                                                           |
-  | gateway_port        | INT4        | 443           | Port number for listening connections                                                                    |
-  | gateway_keystore_id | INT4        | 1             | The link to an id column of the `keystore` table for incoming TLS connections                            |
+  | pool_size           | INT         | 20            | Max count of virtual threads which the route can maintain                                                |
+  | tls_cache_size      | INT         | 100           | Count of clients the connections of which can be resumed without repeat of heavy handshake               |
+  | tls_cache_timeout   | INT         | 1800          | Timeout in seconds for clients the connections of which can be resumed without repeat of heavy handshake |
+  | filter_id           | INT         | 1             | The link to an id column of the `filter` table                                                           |
+  | gateway_port        | INT         | 443           | Port number for listening connections                                                                    |
+  | gateway_keystore_id | INT         | 1             | The link to an id column of the `keystore` table for incoming TLS connections                            |
   | gateway_tls_enabled | BOOL        | FALSE         | Enables and disables TLS-mode. When false the gateway operates with traffic without any impact           |
   | gateway_tls_mutual  | BOOL        | FALSE         | If true the gateway will require a client certificate                                                    |
-  | target_port         | INT4        | 80            | Port number for establishing of connections with a target server or machine                              |
+  | target_port         | INT         | 80            | Port number for establishing of connections with a target server or machine                              |
   | target_host         | TEXT        | 192.168.0.1   | IP-address or hostname of target server or machine                                                       |
-  | target_keystore_id  | INT4        | 1             | The link to an id column of the `keystore` table for target TLS connections                              |
+  | target_keystore_id  | INT         | 1             | The link to an id column of the `keystore` table for target TLS connections                              |
   | target_tls_enabled  | BOOL        | TRUE          | Enable or disable TLS-mode with target server or machine                                                 |
   | useSystemCa         | bool        | true          | Setting the system CA authorities as trusted                                                             |
 
@@ -50,4 +50,4 @@
   | Column     | Type | Example value | Description                                                        |
   |------------|------|---------------|--------------------------------------------------------------------|
   | ip         | TEXT | 192.168.0.2   | IP-address for applying filtration                                 |
-  | filter_id  | INT4 | 1             | The link to an id column of the `filter` table for filtration mode |
+  | filter_id  | INT  | 1             | The link to an id column of the `filter` table for filtration mode |
