@@ -66,7 +66,7 @@ Using the commands generate the root and intermediate authorities. Adjust the `-
 ```
 mkdir certs
 ```
-Generate RootCA:
+Generate RootCA key:
 
 Ed25519:
 ```
@@ -81,11 +81,14 @@ Prime 384:
 openssl genpkey -algorithm EC -pkeyopt ec_paramgen_curve:secp384r1 -out certs/ca.key
 ```
 
-Generate IntermediateCA:
+After key generation make a RootCA cert:
 
 ```
 openssl req -new -x509 -days 7300 -key certs/ca.key -out certs/ca.pem
 ```
+
+Generate IntermediateCA key:
+
 Ed25519:
 ```
 openssl genpkey -algorithm ed25519 -out certs/im.key
@@ -99,7 +102,7 @@ Prime 384:
 openssl genpkey -algorithm EC -pkeyopt ec_paramgen_curve:secp384r1 -out certs/im.key
 ```
 
-Sign the IntermediateCA by RootCA
+Sign the IntermediateCA by RootCA:
 
 ```
 openssl req -new -key certs/im.key -config openssl.cnf -out certs/im.csr
