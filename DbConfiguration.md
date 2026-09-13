@@ -3,12 +3,12 @@
 
   The configuration is the same as YAML and describes by tables rolled from the Liquibase. First table is `unit`:
 
-  | Column            | Type        | Example value | Description                                                                                                    |
-  |-------------------|-------------|---------------|----------------------------------------------------------------------------------------------------------------|
-  | name              | VARCHAR(64) | My unit       | Describes a unit name to getting necessary configuration linked to the unit name                               |
-  | licence           | TEXT        | PERSONAL      | The valid license encoded as a Base64-string                                                                   |
-  | messenger_token   | TEXT        | 123456789     | The Telegram token for a bot to sending alerts. If emply the Telegram alerting will be disabled                |
-  | messenger_chat_id | TEXT        | 54321         | The Telegram chat id for a channel where alerts are collected. If emply the Telegram alerting will be disabled |
+  | Column            | Type        | Example value | Description                                                                                                                                                                          |
+  |-------------------|-------------|---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+  | name              | VARCHAR(64) | My unit       | Describes a unit name to getting necessary configuration linked to the unit name. Note, the name must be equal with `ratatoskr.db.unitName` value otherwise the config won't be work |
+  | licence           | TEXT        | PERSONAL      | The valid license encoded as a Base64-string                                                                                                                                         |
+  | messenger_token   | TEXT        | 123456789     | The Telegram token for a bot to sending alerts. If emply the Telegram alerting will be disabled                                                                                      |
+  | messenger_chat_id | TEXT        | 54321         | The Telegram chat id for a channel where alerts are collected. If emply the Telegram alerting will be disabled                                                                       |
 
   A **`route`** table has next columns:
 
