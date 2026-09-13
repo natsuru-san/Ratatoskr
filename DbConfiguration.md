@@ -32,11 +32,11 @@
 
   A **`keystore`** table has next columns:
 
-  | Column      | Type  | Example value                                    | Description                                                           |
-  |-------------|-------|--------------------------------------------------|-----------------------------------------------------------------------|
-  | description | TEXT  | My keystore for a connecting with my wifi-router | The description field and doesn't impact to work                      |
-  | content     | TEXT  | uPbDUVzb6Omrj4IEtOqAwJ0CAicQ                     | The Base64-encoded keystore which contains certificate chain and key  |
-  | password    | TEXT  | qwerty1234                                       | The password for the given keystore and for a key inside the keystore |
+  | Column      | Type  | Example value                                    | Description                                                                 |
+  |-------------|-------|--------------------------------------------------|-----------------------------------------------------------------------------|
+  | description | TEXT  | My keystore for a connecting with my wifi-router | The description field and doesn't impact to work                            |
+  | content     | TEXT  | uPbDUVzb6Omrj4IEtOqAwJ0CAicQ                     | The Base64-encoded PKSC12-keystore which contains certificate chain and key |
+  | password    | TEXT  | qwerty1234                                       | The password for the given keystore and for a key inside the keystore       |
 
   A **`filter`** table has next columns:
 

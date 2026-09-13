@@ -57,10 +57,10 @@
 
   Both of a gateway and target blocks have a **`keystore`** block:
 
-  | Parameter | Type   | Example value                               | Description                                                           |
-  |-----------|--------|---------------------------------------------|-----------------------------------------------------------------------|
-  | path      | string | /home/natsuru/Desktop/ssl/certs/natsuru.p12 | The path to a keystore which contains certificate chain and key       |
-  | pass      | string | qwerty1234                                  | The password for the given keystore and for a key inside the keystore |
+  | Parameter | Type   | Example value                               | Description                                                            |
+  |-----------|--------|---------------------------------------------|------------------------------------------------------------------------|
+  | path      | string | /home/natsuru/Desktop/ssl/certs/natsuru.p12 | The path to a PKCS12-keystore which contains certificate chain and key |
+  | pass      | string | qwerty1234                                  | The password for the given keystore and for a key inside the keystore  |
 
   The gateway block contains a **`tls`** block describing TLS-mode:
 
