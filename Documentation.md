@@ -73,7 +73,7 @@ e) To use the configuration you must set db-params to the "*/etc/ratatoskr.yaml*
   * *ratatoskr.db.login*
   * *ratatoskr.db.password*
 
-f) Fill tables with data. All tables are an analog of the YAML-configuration, so you may use the first paragraph (*YAML static configuration*) as a reference. But there is one exception: a keystore table has a content column instead the path and receives p12-keystores as Base64 text.
+f) Fill tables with data. All tables are an analog of the YAML-configuration and its describe in [DbConfiguration.md](DbConfiguration.md) as a reference.
 
 ### 3. Commandline arguments
 The app also contains util functions are helping configuration setting. The list of arguments are being go to replenish in the near future.
