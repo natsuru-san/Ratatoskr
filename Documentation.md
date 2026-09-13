@@ -3,11 +3,23 @@
 ### 0. First setup
 a) Before some actions the user have to load the Ratatoskr package from the [release page](https://github.com/natsuru-san/Ratatoskr/releases) in depend on CPU-architecture of a goal-machine (arm or x86). The setting up is easy and a command above is enough:
 
-  * user@machine:#~`dpkg -i ratatoskr_5.1.*`
+  * root@machine:#~`dpkg -i ratatoskr_5.1.*`
 
     or
 
-  * user@machine:#~`apt install ./ratatoskr_5.1.*`
+  * root@machine:#~`apt install ./ratatoskr_5.1.*`
+
+  Since an installation moment you may run it as a service using the command:
+
+  * root@machine:#~`service ratatoskr start`
+
+  After performing the daemon is working with a single route given as an example in `/etc/ratatoskr.yaml`. The logging of the work you may see through the command:
+
+  * root@machine:#~`journalctl -u ratatoskr`
+
+  or if in real time
+
+  * root@machine:#~`journalctl -u ratatoskr -f`
 
 b) Next step is a configuring JVM args located in the path "*/usr/lib/ratatoskr/ratatoskr.args*" inside a variable "*JVM_ARGS*".
 
@@ -24,66 +36,8 @@ b) Next step is a configuring JVM args located in the path "*/usr/lib/ratatoskr/
   Note that the "*APP_ARGS*" variable does not need to be adjusted unless absolutely necessary.
 
 ### 1. YAML static configuration
-  * Further open the "*/etc/ratatoskr.yaml*" and define with what config do you want to use the service. You are available to use this "YAML" config and a database config. For using database configuration please read the paragraph #2 (*Database configuration*).
 
-  * If you are the person, and you are going to use this app for self set the *ratatoskr.license* value to `PERSONAL`. Otherwise, you have to contact with author to get a valid license key.
-
-  * The Ratatoskr starting banner is cute, but it may interfere in logs sometimes. To manage it the *ratatoskr.banner* setting can help you. Switch up the setting to `false` and banner is disappearing at the app starting and your logs will be cleaner.
-
-  * Block *ratatoskr.database.enabled* must be set `false`
-
-  * To get alerts to a Telegram bot write a valid token to *ratatoskr.logger.token* and chat identifier to *ratatoskr.logger.chatId*. Empty values mean that Telegram alerts disabled.
-
-  * Add routes to *ratatoskr.routes*. The block is an array. So you may run multiple routes per one time with various configurations. Parameters of one route for example:
-
-    | Parameter   | Type         | Example value | Description                                                                                     |
-    |-------------|--------------|---------------|-------------------------------------------------------------------------------------------------|
-    | name        | string       | MySiteName    | The name of route                                                                               |
-    | poolSize    | unsigned int | 20            | Max count of virtual threads which the route can maintain                                       |
-    | useSystemCa | bool         | true          | Setting the system CA authorities as trusted                                                    |
-    | gateway     | object       |               | The block describes a server which listens a port and receives connections                      |
-    | target      | object       |               | The block describes a target destination where the received from gateway traffic will be routed |
-
-    A gateway block has next parameters:
-
-    | Parameter | Type               | Example value | Description                                                   |
-    |-----------|--------------------|---------------|---------------------------------------------------------------|
-    | keystore  | object             |               | The block describes a keystore path and password for it       |
-    | filter    | object             |               | The block describes a filtration of IP-addresses              |
-    | tls       | object             |               | The block describes encryption params of the gateway and mode |
-    | port      | unsigned short int | 8080          | Port number for listening and establishing of connections     |
-
-    A target block has next parameters:
-
-    | Parameter | Type               | Example value | Description                                               |
-    |-----------|--------------------|---------------|-----------------------------------------------------------|
-    | keystore  | object             |               | The block describes a keystore path and password for it   |
-    | tls       | bool               | false         | Enable or disable TLS-mode with target server             |
-    | host      | string             | 192.168.0.1   | IP-address or hostname of target server                   |
-    | port      | unsigned short int | 8080          | Port number for listening and establishing of connections |
-
-    Both of a gateway and target blocks have a keystore block:
-
-    | Parameter | Type   | Example value                               | Description                                                           |
-    |-----------|--------|---------------------------------------------|-----------------------------------------------------------------------|
-    | path      | string | /home/natsuru/Desktop/ssl/certs/natsuru.p12 | The path to a keystore which contains certificate chain and key       |
-    | pass      | string | qwerty1234                                  | The password for the given keystore and for a key inside the keystore |
-
-    The gateway block contains a tls-block describing TLS-mode:
-
-    | Parameter     | Type           | Example value | Description                                                                                              |
-    |---------------|----------------|---------------|----------------------------------------------------------------------------------------------------------|
-    | enabled       | bool           | true          | Enables and disables TLS-mode. When false the gateway operates with traffic without any impact           |
-    | mutual        | bool           | true          | If true the gateway will require a client certificate                                                    |
-    | cacheSize     | unsigned int   | 20            | Count of clients the connections of which can be resumed without repeat of heavy handshake               |
-    | cacheTimeout  | unsigned int   | 3600          | Timeout in seconds for clients the connections of which can be resumed without repeat of heavy handshake |
-
-    The gateway block contains a filter-block describing rules of accepting connections:
-
-    | Parameter | Type   | Example value                  | Description                                                                                                                                                                                    |
-    |-----------|--------|--------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-    | list      | string | 192.168.0.2,127.0.0.7,10.0.0.4 | IP-addresses for filtration                                                                                                                                                                    |
-    | mode      | string | blacklist/whitelist            | Mode for filtration. If user is picked up a blacklist connections from enumerated IP-addresses will be dropped. If user select the whitelist all connections will be dropped except enumerated |
+To use the kind of configuration you have to edit the file using the command **`nano /etc/ratatoskr.yaml`** for your needs. A description of elements you may see in [YamlConfiguration.md](YamlConfiguration.md).
 
 ### 2. Database configuration
 The database configuration is dynamic and may be set on the air. In enabled db connection the Ratatoskr uses to checking database for new routes every minute. If it discovers changes it apply new configuration immediately. In this configuration a fallback mode is available. If the database connection is lost for a long time the next restart won't crash the app because the last info about routes and their params was saved to an encrypted file "*/usr/lib/ratatoskr/fallback.rfc*" and it will read the file. The RFC-file also contains keystores and passwords which can't be ejected from it.
