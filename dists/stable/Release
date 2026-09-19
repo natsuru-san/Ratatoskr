@@ -1,0 +1,16 @@
+Origin: Ratatoskr Repository
+Label: Ratatoskr
+Suite: stable
+Codename: stable
+Architectures: amd64 arm64
+Components: main
+MD5Sum:
+ 1dd930afec822892c0a06581c2c6f6a4 dists/stable/main/binary-amd64/Packages
+ da829bf974b858496116b2e7bdc242a7 dists/stable/main/binary-amd64/Packages.gz
+ 1dd930afec822892c0a06581c2c6f6a4 dists/stable/main/binary-arm64/Packages
+ 00517590e64f7223b4dc3ba7a08d69c3 dists/stable/main/binary-arm64/Packages.gz
+SHA256:
+ fae3f798ed48ce90c906525fccacce615e2898eb9a93858198c048c6282dc42f dists/stable/main/binary-amd64/Packages
+ ea823bc699ee35b9b7e9d0a72030376a13c77fd3a7f094ef27e5c5ccc96bc410 dists/stable/main/binary-amd64/Packages.gz
+ fae3f798ed48ce90c906525fccacce615e2898eb9a93858198c048c6282dc42f dists/stable/main/binary-arm64/Packages
+ 06d6f609697211006031a1023dbc7304f3280de287df0b5c7698021971778a48 dists/stable/main/binary-arm64/Packages.gz

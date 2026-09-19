@@ -1,0 +1,35 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+Origin: Ratatoskr Repository
+Label: Ratatoskr
+Suite: stable
+Codename: stable
+Architectures: amd64 arm64
+Components: main
+MD5Sum:
+ 1dd930afec822892c0a06581c2c6f6a4 dists/stable/main/binary-amd64/Packages
+ da829bf974b858496116b2e7bdc242a7 dists/stable/main/binary-amd64/Packages.gz
+ 1dd930afec822892c0a06581c2c6f6a4 dists/stable/main/binary-arm64/Packages
+ 00517590e64f7223b4dc3ba7a08d69c3 dists/stable/main/binary-arm64/Packages.gz
+SHA256:
+ fae3f798ed48ce90c906525fccacce615e2898eb9a93858198c048c6282dc42f dists/stable/main/binary-amd64/Packages
+ ea823bc699ee35b9b7e9d0a72030376a13c77fd3a7f094ef27e5c5ccc96bc410 dists/stable/main/binary-amd64/Packages.gz
+ fae3f798ed48ce90c906525fccacce615e2898eb9a93858198c048c6282dc42f dists/stable/main/binary-arm64/Packages
+ 06d6f609697211006031a1023dbc7304f3280de287df0b5c7698021971778a48 dists/stable/main/binary-arm64/Packages.gz
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCAAdFiEEjAAYJPcRvs2AJCfUdsnmjtmzXTwFAmqulCIACgkQdsnmjtmz
+XTypPQ/8CxvFyFYMSB5izGufB9+lMs2US5s+26uqgR613DJKegOGhDDUbmqrSKXK
+mKzaLNY/nocJQo+LAL0K05Dia6QyxCcCFC3Z3L20PPRuCY0WX+nF9j6uRjUn3J/0
+GRHCELQjK7O0k51Yafl/7h+0oa5D2YH1qjbkOMwiTZPInZP12KuoHmznpoY/GnOg
+ASvmFbuc82Ll1TLhH8kk2mvby/u95m+P4NYAqmnejMbhBq2CWjgVIU8AqwDMH2K8
+wz/bQb1AwJ71esJ2adCMR3LvYpQ9g7GO1umbsC9ZnzKX+V2Kbwny9dw+24eoJygF
+Tyn7jXXpNeaGROU0iKHcvN/uqoHHRaaRLuAaUaeskkaUvrQBk1N+cjLGpH8akN9p
+QJlF+oRadMWm3khpSmv/54iJ5XCRoHnPTjsQYw8AJM79U4q1P7hfSkZwDiHsit9b
+b9LmlnJP+0i6SzsEk/SKJTvwtRn8mdgJzMMyMATN4uYYHyBS1Ym1C7MmUnVbnA2l
+6XzwxKEcE8mfxZL5+Q2rGnihlvFIVUVcGv39RTHvTjMr9bDBWiR/Vttg2NKCtEeI
+oSQhZF6tojLxuVMIePHIpuBB57rz5QCUODLN1Lcj84sDIqldlIiga42BCK3nFRkX
+QSMfKtv1aNNcyWgtWr5DsMiSn2Ht0WuKSGX4vzXVfjfOSwacNn8=
+=6ddf
+-----END PGP SIGNATURE-----

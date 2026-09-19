@@ -1,0 +1,126 @@
+Package: ratatoskr-avx2
+Version: 5.1.14
+Architecture: amd64
+Maintainer: Natsuru <natsuru-san@mail.com>
+Installed-Size: 73848
+Depends: libc6 (>= 2.31), zlib1g (>= 1:1.2.11)
+Conflicts: ratatoskr-avx512, ratatoskr-sse42, ratatoskr-generic, ratatoskr-v8.0, ratatoskr-v8.1
+Filename: pool/main/ratatoskr_5.1.14_x86_64-avx2.deb
+Size: 28009136
+MD5sum: 36a58748b71c41da600079e004746ff4
+SHA1: 8a2c7f3b3498a3840d3b48b7e6e0cfd23b5744d9
+SHA256: 4bc5151877065f5de14d6e48cf513df54437a47b2b1f59a3fd2f4cf5654d066b
+Section: base
+Priority: optional
+Description: The service is a connector between nodes
+ The Ratatoskr allows managing your traffic transparently with(-out)
+ applying an encryption. For example you have a personal http-site
+ and you want to have an access to it through https/tls-technologies.
+ The app can give you power to do this. All of you have to do is
+ setting up it to a server/VPS and configuring of routes.
+
+Package: ratatoskr-avx512
+Version: 5.1.14
+Architecture: amd64
+Maintainer: Natsuru <natsuru-san@mail.com>
+Installed-Size: 73896
+Depends: libc6 (>= 2.31), zlib1g (>= 1:1.2.11)
+Conflicts: ratatoskr-avx2, ratatoskr-sse42, ratatoskr-generic, ratatoskr-v8.0, ratatoskr-v8.1
+Filename: pool/main/ratatoskr_5.1.14_x86_64-avx512.deb
+Size: 28006800
+MD5sum: 6d00e296f7f71266bf8678203f0f65c2
+SHA1: 5508776f696fd0994cadf070ebf6c8b19639c368
+SHA256: 12c9ea0439c319085b872f36a1ab9ad519f22b183c9874a2b1131a75622e64ff
+Section: base
+Priority: optional
+Description: The service is a connector between nodes
+ The Ratatoskr allows managing your traffic transparently with(-out)
+ applying an encryption. For example you have a personal http-site
+ and you want to have an access to it through https/tls-technologies.
+ The app can give you power to do this. All of you have to do is
+ setting up it to a server/VPS and configuring of routes.
+
+Package: ratatoskr-generic
+Version: 5.1.14
+Architecture: amd64
+Maintainer: Natsuru <natsuru-san@mail.com>
+Installed-Size: 73784
+Depends: libc6 (>= 2.31), zlib1g (>= 1:1.2.11)
+Conflicts: ratatoskr-avx512, ratatoskr-avx2, ratatoskr-sse42, ratatoskr-v8.0, ratatoskr-v8.1
+Filename: pool/main/ratatoskr_5.1.14_x86_64-generic.deb
+Size: 27970664
+MD5sum: 79e602a87bd95d8f181359c63b9cfd45
+SHA1: 8b97f01c137378fcd0cf8db70e7931735dab83f4
+SHA256: 0d5b8668c2b1394071e37fe31c8935768cd2eae825288db18361a69f16f61565
+Section: base
+Priority: optional
+Description: The service is a connector between nodes
+ The Ratatoskr allows managing your traffic transparently with(-out)
+ applying an encryption. For example you have a personal http-site
+ and you want to have an access to it through https/tls-technologies.
+ The app can give you power to do this. All of you have to do is
+ setting up it to a server/VPS and configuring of routes.
+
+Package: ratatoskr-sse42
+Version: 5.1.14
+Architecture: amd64
+Maintainer: Natsuru <natsuru-san@mail.com>
+Installed-Size: 73824
+Depends: libc6 (>= 2.31), zlib1g (>= 1:1.2.11)
+Conflicts: ratatoskr-avx512, ratatoskr-avx2, ratatoskr-generic, ratatoskr-v8.0, ratatoskr-v8.1
+Filename: pool/main/ratatoskr_5.1.14_x86_64-sse42.deb
+Size: 28000976
+MD5sum: c89992cbafca61191920bae286ea17f4
+SHA1: 5ba87adfebf2309291fe5c2022aa27150b061794
+SHA256: e28f4d276d70055bb5c16707026e8a6c2669ec5f41d5c49ad85cf90dc856e0f3
+Section: base
+Priority: optional
+Description: The service is a connector between nodes
+ The Ratatoskr allows managing your traffic transparently with(-out)
+ applying an encryption. For example you have a personal http-site
+ and you want to have an access to it through https/tls-technologies.
+ The app can give you power to do this. All of you have to do is
+ setting up it to a server/VPS and configuring of routes.
+
+Package: ratatoskr-v8.0
+Version: 5.1.14
+Architecture: arm64
+Maintainer: Natsuru <natsuru-san@mail.com>
+Installed-Size: 71696
+Depends: libc6 (>= 2.31), zlib1g (>= 1:1.2.11)
+Conflicts: ratatoskr-avx512, ratatoskr-avx2, ratatoskr-sse42, ratatoskr-generic, ratatoskr-v8.1
+Filename: pool/main/ratatoskr_5.1.14_aarch64-generic.deb
+Size: 26942148
+MD5sum: 10f4ce0ed8765418221036c02fb85712
+SHA1: b5df41ef9c94984b8a90b4808e9d3ed55d63dae4
+SHA256: c536d35d50bd4ce41cd2e8fd79b7d09deaecd18ac752b1b2a6e56616ed8252ed
+Section: base
+Priority: optional
+Description: The service is a connector between nodes
+ The Ratatoskr allows managing your traffic transparently with(-out)
+ applying an encryption. For example you have a personal http-site
+ and you want to have an access to it through https/tls-technologies.
+ The app can give you power to do this. All of you have to do is
+ setting up it to a server/VPS and configuring of routes.
+
+Package: ratatoskr-v8.1
+Version: 5.1.14
+Architecture: arm64
+Maintainer: Natsuru <natsuru-san@mail.com>
+Installed-Size: 71568
+Depends: libc6 (>= 2.31), zlib1g (>= 1:1.2.11)
+Conflicts: ratatoskr-avx512, ratatoskr-avx2, ratatoskr-sse42, ratatoskr-generic, ratatoskr-v8.0
+Filename: pool/main/ratatoskr_5.1.14_aarch64-8.1.deb
+Size: 26877850
+MD5sum: 2fe6fe2389c66d54b6dc514428743a08
+SHA1: 5f67a1b8930e78fd78ca8817788fdc4e418978fc
+SHA256: 90f1082fb12e30db56651262dcb76c684160985ff73673e361788f751febd3d8
+Section: base
+Priority: optional
+Description: The service is a connector between nodes
+ The Ratatoskr allows managing your traffic transparently with(-out)
+ applying an encryption. For example you have a personal http-site
+ and you want to have an access to it through https/tls-technologies.
+ The app can give you power to do this. All of you have to do is
+ setting up it to a server/VPS and configuring of routes.
+
