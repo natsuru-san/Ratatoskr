@@ -34,10 +34,15 @@ sudo apt-get install ratatoskr-generic #or more appropriate CPU-arch package lik
 
 Full list of available package is there:
 
+**x86_64:**
+
 - ratatoskr-avx512
 - ratatoskr-avx2
 - ratatoskr-sse42
 - ratatoskr-generic
+
+**ARM64**
+
 - ratatoskr-v8.0
 - ratatoskr-v8.1
 
