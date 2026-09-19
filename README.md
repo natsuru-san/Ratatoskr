@@ -28,7 +28,7 @@ The installation is easy and can be performed by the bellow commands:
 curl -fsSL https://natsuru-san.github.io/Ratatoskr/natsuru-public-keyring.gpg | sudo gpg --dearmor -o /etc/apt/keyrings/natsuru-public-keyring.gpg
 echo "deb [signed-by=/etc/apt/keyrings/natsuru-public-keyring.gpg] https://natsuru-san.github.io/Ratatoskr stable main" | sudo tee /etc/apt/sources.list.d/ratatoskr-repository.list
 sudo apt-get update
-sudo apt-get install ratatoskr-generic #or more appropriate CPU-arch package like (for example) ratatoskr-avx512 or ratatoskr-v8.1
+sudo apt-get install ratatoskr-avx2
 
 ```
 
