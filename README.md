@@ -21,6 +21,26 @@ References:
 * **Dual-Engine Configuration:** Manage your routing via declarative `YAML` file for static setups, or drive it dynamically via a **PostgreSQL** database.
 * **Instant Monitoring:** Built-in integration with **Telegram Bot API** for real-time alerting, health checks, and system notifications.
 
+The installation is easy and can be performed by the bellow commands:
+
+```
+
+curl -fsSL https://natsuru-san.github.io/Ratatoskr/natsuru-public-keyring.gpg | sudo gpg --dearmor -o /etc/apt/keyrings/natsuru-public-keyring.gpg
+echo "deb [signed-by=/etc/apt/keyrings/natsuru-public-keyring.gpg] https://natsuru-san.github.io/Ratatoskr stable main" | sudo tee /etc/apt/sources.list.d/ratatoskr-repository.list
+sudo apt-get update
+sudo apt-get install ratatoskr-generic #or more appropriate CPU-arch package like (for example) ratatoskr-avx512 or ratatoskr-v8.1
+
+```
+
+Full list of available package is there:
+
+- ratatoskr-avx512
+- ratatoskr-avx2
+- ratatoskr-sse42
+- ratatoskr-generic
+- ratatoskr-v8.0
+- ratatoskr-v8.1
+
 ---
 
 ## 📋 Requirements
