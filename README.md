@@ -30,6 +30,11 @@ Firstly you have to determine which CPU's instructions are supported by your tar
 * If you see the only **sse4_2** you will be able to use the only two variants: *ratatoskr-sse42* or *ratatoskr-generic*. Of course the *ratatoskr-sse42* is the better package in the case.
 * If you haven't seen any instructions in output from the command your CPU is obsolete and the generic package is available to your target machine. Other packages won't be to work.
 
+For aarch64 CPUs you have to execute this `cat /proc/cpuinfo | grep -E 'atomics|lse'` command.
+
+* If you see the **atomics** or **lse** both ARM packages are available to you. The *ratatoskr-v8.1* will be the better choice.
+* If you haven't seen any highlighted string your target CPU is the base variant of the ARM with 64-bits. Use the *ratatoskr-v8.0*.
+
 The installation is easy and can be performed by the bellow commands:
 
 ```
@@ -52,8 +57,8 @@ Full list of available package is there:
 
 **ARM64**
 
-- ratatoskr-v8.0
 - ratatoskr-v8.1
+- ratatoskr-v8.0
 
 ---
 
