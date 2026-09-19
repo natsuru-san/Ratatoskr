@@ -21,14 +21,23 @@ References:
 * **Dual-Engine Configuration:** Manage your routing via declarative `YAML` file for static setups, or drive it dynamically via a **PostgreSQL** database.
 * **Instant Monitoring:** Built-in integration with **Telegram Bot API** for real-time alerting, health checks, and system notifications.
 
+## 🦾 Quick start
+
+Firstly you have to determine which CPU's instructions are supported by your target server. Perform the `cat /proc/cpuinfo | grep -E 'avx512|avx2|sse4_2'` on the target machine.
+
+* If the terminal output includes the **avx512** text you will be able to run an any x86_64 package. Note in this case, the *ratatoskr-avx512* package will work faster than the other variants.
+* If your terminal displayed **avx2** and **sse4_2** all x86_64 packages are available except *ratatoskr-avx512*. The *ratatoskr-avx2* package will work faster than the other variants.
+* If you see the only **sse4_2** you will be able to use the only two variants: *ratatoskr-sse42* or *ratatoskr-generic*. Of course the *ratatoskr-sse42* is the better package in the case.
+* If you haven't seen any instructions in output from the command your CPU is obsolete and the generic package is available to your target machine. Other packages won't be to work.
+
 The installation is easy and can be performed by the bellow commands:
 
 ```
 
 curl -fsSL https://natsuru-san.github.io/Ratatoskr/natsuru-public-keyring.gpg | sudo gpg --dearmor -o /etc/apt/keyrings/natsuru-public-keyring.gpg
 echo "deb [signed-by=/etc/apt/keyrings/natsuru-public-keyring.gpg] https://natsuru-san.github.io/Ratatoskr stable main" | sudo tee /etc/apt/sources.list.d/ratatoskr-repository.list
-sudo apt-get update
-sudo apt-get install ratatoskr-avx2
+sudo apt update
+sudo apt install ratatoskr-avx2
 
 ```
 
