@@ -15,6 +15,7 @@ References:
 
 * **Omnivorous TCP Routing:** Supports both straightforward plain-text TCP forwarding and deeply customized encrypted pipelines.
 * **Unlimited quantity of routes:** Yaml-config or db-table may contain routes as many as the OS allows to occupy ports.
+* **On-line configurable:** Db-config allows to add or delete your routes on the fly without using the SSH connection. The proxy receives updates from a database every minute and applies changes if existed.
 * **Pure TLS 1.3 Architecture:** Native and strict support for TLS 1.3 across all encrypted channels.
 * **Flexible Cryptography Topologies:** Encryption can be terminated at the gateway, enforced at the client side, or applied simultaneously using distinct PKCS#12 (`.p12`) identity stores.
 * **Broad Cryptographic Support:** Compatible with **RSA**, **Prime-curve (ECDSA)**, and modern **Ed25519** keys.
@@ -50,15 +51,15 @@ Full list of available package is there:
 
 **x86_64:**
 
-- ratatoskr-avx512
-- ratatoskr-avx2
-- ratatoskr-sse42
-- ratatoskr-generic
+- `ratatoskr-avx512` (Xeon 6700P, Ryzen EPYC 9005)
+- `ratatoskr-avx2` (Intel Core 4-14 gen)
+- `ratatoskr-sse42` (Intel Core 1-3 gen)
+- `ratatoskr-generic` (Intel Core2Duo)
 
 **ARM64**
 
-- ratatoskr-v8.1
-- ratatoskr-v8.0
+- `ratatoskr-v8.1` (Raspberry Pi 5)
+- `ratatoskr-v8.0` (Raspberry Pi 1-4)
 
 ---
 
