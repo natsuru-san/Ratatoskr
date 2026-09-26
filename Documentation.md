@@ -25,7 +25,7 @@ b) Next step is a configuring JVM args located in the path "*/usr/lib/ratatoskr/
 
   * If your goal machine has 512mb RAM or less highly recommended add the `-XX:ParallelGCThreads=1` argument. The argument restricts an embedded garbage collector by the one thread. Otherwise, the GC will utilize more memory than enough and the OS will invoke OOM-killer. It is not relevant for machines having 1gb RAM or more.
 
-  * Adjust `-XX:InitialHeapSize=1300m` and`-XX:MaxHeapSize=1300m` to restrict memory consuming. The "*InitialHeapSize*" means the heap size at app starting. The "*MaxHeapSize*" is the main restriction of heap consuming memory. Total memory consuming is the heap size plus 35mb approximately.
+  * Adjust `-XX:InitialHeapSize=1300m`, `-XX:MaxDirectMemorySize=256m` and`-XX:MaxHeapSize=1300m` to restrict memory consuming. The "*InitialHeapSize*" means the heap size at app starting. The "*MaxHeapSize*" is the main restriction of heap consuming memory. The "*MaxDirectMemorySize*" param means the off-heap memory for byte buffers. The value must be calculated by the formula (2880 x route count x pool size)/1048576 in megabytes. Total memory consuming is the heap size plus 35mb approximately.
 
   * Set the `-XX:MaxNewSize=1024m` to 80% from "*MaxHeapSize*". It is needed because the cryptographic algorithms require much memory during handshakes. On the contrary long-living objects occupy memory in depend on connection pool size specified by user and the size is small.
 
