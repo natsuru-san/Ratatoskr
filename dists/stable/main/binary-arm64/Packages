@@ -1,15 +1,15 @@
 Package: ratatoskr-avx2
-Version: 5.1.24
+Version: 5.1.25
 Architecture: amd64
 Maintainer: Natsuru <natsuru-san@mail.com>
-Installed-Size: 108632
+Installed-Size: 108696
 Depends: libc6 (>= 2.31), zlib1g (>= 1:1.2.11)
 Conflicts: ratatoskr-avx512, ratatoskr-sse42, ratatoskr-generic, ratatoskr-v8.0, ratatoskr-v8.1
-Filename: pool/main/ratatoskr_5.1.24_x86_64-avx2.deb
-Size: 41185832
-MD5sum: 418e222b1e29363424dda09e8412f2b6
-SHA1: b4c0c964e5354dd4d0051e3de96a10ca26635fbd
-SHA256: 3ac976538039085a86bb7b0a86c512f15a7ff062fd0a3feef6a0c2bcbbb14a9b
+Filename: pool/main/ratatoskr_5.1.25_x86_64-avx2.deb
+Size: 41171874
+MD5sum: ebb81524e16351dcd4db8ef3c4b4798c
+SHA1: 9bad3cd7ce505c35bda294d27fe2469db7aa11aa
+SHA256: dd5360e69d54e3245545ac378922ef8cf9c1da20eaa2812e167c995bb7635d07
 Section: base
 Priority: optional
 Description: The service is a connector between nodes
@@ -20,17 +20,17 @@ Description: The service is a connector between nodes
  setting up it to a server/VPS and configuring of routes.
 
 Package: ratatoskr-avx512
-Version: 5.1.24
+Version: 5.1.25
 Architecture: amd64
 Maintainer: Natsuru <natsuru-san@mail.com>
 Installed-Size: 108944
 Depends: libc6 (>= 2.31), zlib1g (>= 1:1.2.11)
 Conflicts: ratatoskr-avx2, ratatoskr-sse42, ratatoskr-generic, ratatoskr-v8.0, ratatoskr-v8.1
-Filename: pool/main/ratatoskr_5.1.24_x86_64-avx512.deb
-Size: 41233538
-MD5sum: 55cd7d3cd51914c30f724cb750a4d167
-SHA1: 5b1705ddc5781eb6d995e6052a5da7f2a7e7d2e4
-SHA256: 63ec4e31a3a42da2492b95c1e72c81de4cd9a5d0dc22af48fcbffc99bcfbee7d
+Filename: pool/main/ratatoskr_5.1.25_x86_64-avx512.deb
+Size: 41210632
+MD5sum: a4403dd631d3cdc91a860d89712ab519
+SHA1: bb0d51661793fdfb480c9f84d90f801ccfefa0df
+SHA256: 4b888da8937b3d6df5ac54c3b10c6886fdc62a4dd284dd86a12b6d0296335cc6
 Section: base
 Priority: optional
 Description: The service is a connector between nodes
@@ -41,17 +41,17 @@ Description: The service is a connector between nodes
  setting up it to a server/VPS and configuring of routes.
 
 Package: ratatoskr-generic
-Version: 5.1.24
+Version: 5.1.25
 Architecture: amd64
 Maintainer: Natsuru <natsuru-san@mail.com>
-Installed-Size: 108380
+Installed-Size: 108376
 Depends: libc6 (>= 2.31), zlib1g (>= 1:1.2.11)
 Conflicts: ratatoskr-avx512, ratatoskr-avx2, ratatoskr-sse42, ratatoskr-v8.0, ratatoskr-v8.1
-Filename: pool/main/ratatoskr_5.1.24_x86_64-generic.deb
-Size: 40910372
-MD5sum: 3d4f51422a306cd77b0ca6ecedde17de
-SHA1: 387cc7b1b58e0a5e3ae8c072497637e58aa0db9b
-SHA256: 89c00b5b56b6145fb7a493c11c70bc84ac113df0ce2cb20026b74f98cfaf13ad
+Filename: pool/main/ratatoskr_5.1.25_x86_64-generic.deb
+Size: 40927548
+MD5sum: 7f41c2ce13c7b802c393d1d5e936c179
+SHA1: 71a53791d5d21f40a90596004ae3b44b58cd4253
+SHA256: a26b85c78a4f462a383b64edc0d496228dfba11ba16beb3b0b5edd63f68e2f1d
 Section: base
 Priority: optional
 Description: The service is a connector between nodes
@@ -62,17 +62,17 @@ Description: The service is a connector between nodes
  setting up it to a server/VPS and configuring of routes.
 
 Package: ratatoskr-sse42
-Version: 5.1.24
+Version: 5.1.25
 Architecture: amd64
 Maintainer: Natsuru <natsuru-san@mail.com>
-Installed-Size: 108556
+Installed-Size: 108552
 Depends: libc6 (>= 2.31), zlib1g (>= 1:1.2.11)
 Conflicts: ratatoskr-avx512, ratatoskr-avx2, ratatoskr-generic, ratatoskr-v8.0, ratatoskr-v8.1
-Filename: pool/main/ratatoskr_5.1.24_x86_64-sse42.deb
-Size: 40990280
-MD5sum: 58c586b3e1658f7feb24182b028464e3
-SHA1: 4a80c3880313d65cd42f40767d12888e5e96e133
-SHA256: f9c7c848abd04f461c60fa8002fa6e0b115a8c33d7aedc328386befcdc2cec19
+Filename: pool/main/ratatoskr_5.1.25_x86_64-sse42.deb
+Size: 40996634
+MD5sum: 5cdcf823bea276b4da29e1acc147f904
+SHA1: 6d99082f8f12df6be43544f0fd28acf57f649bf6
+SHA256: ba3d4e0300e01985d97c1414ee275fa7703bc0958f52aa0f3e5340435cd80520
 Section: base
 Priority: optional
 Description: The service is a connector between nodes
@@ -83,17 +83,17 @@ Description: The service is a connector between nodes
  setting up it to a server/VPS and configuring of routes.
 
 Package: ratatoskr-v8.0
-Version: 5.1.24
+Version: 5.1.25
 Architecture: arm64
 Maintainer: Natsuru <natsuru-san@mail.com>
 Installed-Size: 102863
 Depends: libc6 (>= 2.31), zlib1g (>= 1:1.2.11)
 Conflicts: ratatoskr-avx512, ratatoskr-avx2, ratatoskr-sse42, ratatoskr-generic, ratatoskr-v8.1
-Filename: pool/main/ratatoskr_5.1.24_aarch64-generic.deb
-Size: 39117952
-MD5sum: 18034a9b4ea56e652567e8f9795c0cb7
-SHA1: 317866275987c0c93d3eef4dfa77e79e85317557
-SHA256: 6967ba31695caf90c07b8742daaddd6d1b3532d2a63d76533e564ecc24dbed83
+Filename: pool/main/ratatoskr_5.1.25_aarch64-generic.deb
+Size: 39115322
+MD5sum: b8112dac6d72531d56b18ef1ec13927d
+SHA1: 05b1ed5bd56d91140d85dc46de6fd90b267f5335
+SHA256: f14ecdaf6b835d485ec5505d16d9050f83b24eb43c98f2b2451cb56a566b6afa
 Section: base
 Priority: optional
 Description: The service is a connector between nodes
@@ -104,17 +104,17 @@ Description: The service is a connector between nodes
  setting up it to a server/VPS and configuring of routes.
 
 Package: ratatoskr-v8.1
-Version: 5.1.24
+Version: 5.1.25
 Architecture: arm64
 Maintainer: Natsuru <natsuru-san@mail.com>
-Installed-Size: 102735
+Installed-Size: 102799
 Depends: libc6 (>= 2.31), zlib1g (>= 1:1.2.11)
 Conflicts: ratatoskr-avx512, ratatoskr-avx2, ratatoskr-sse42, ratatoskr-generic, ratatoskr-v8.0
-Filename: pool/main/ratatoskr_5.1.24_aarch64-8.1.deb
-Size: 39079044
-MD5sum: 16a6359e99f43455db4ddd6b9e206bf9
-SHA1: 56133953e15b830b21b2c427f9acef4b24844dcf
-SHA256: 0819f1a07c5c57ebe18e01ae0149db48971463769e9a25c0c9910eb8393ce57a
+Filename: pool/main/ratatoskr_5.1.25_aarch64-8.1.deb
+Size: 39071050
+MD5sum: cd22ecf45bdcdaadebfb2198112864ac
+SHA1: f66bf1265295e6f78e42e2384a45c9e0b72218ac
+SHA256: 07f594b1225e70a3e37e92b2d43d64dd657dd003a888900e965b0c40133ba8fa
 Section: base
 Priority: optional
 Description: The service is a connector between nodes
