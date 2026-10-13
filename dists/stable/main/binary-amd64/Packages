@@ -1,123 +1,123 @@
-Package: ratatoskr-avx2
-Version: 5.1.25
+Package: ratatoskr-v6-avx2
+Version: 6.0.0
 Architecture: amd64
 Maintainer: Natsuru <natsuru-san@mail.com>
-Installed-Size: 108696
-Depends: libc6 (>= 2.31), zlib1g (>= 1:1.2.11)
-Conflicts: ratatoskr-avx512, ratatoskr-sse42, ratatoskr-generic, ratatoskr-v8.0, ratatoskr-v8.1
-Filename: pool/main/ratatoskr_5.1.25_x86_64-avx2.deb
-Size: 41171874
-MD5sum: ebb81524e16351dcd4db8ef3c4b4798c
-SHA1: 9bad3cd7ce505c35bda294d27fe2469db7aa11aa
-SHA256: dd5360e69d54e3245545ac378922ef8cf9c1da20eaa2812e167c995bb7635d07
+Installed-Size: 109072
+Depends: libc6 (>= 2.35), zlib1g (>= 1:1.2.11)
+Conflicts: ratatoskr-v6-avx512, ratatoskr-v6-sse42, ratatoskr-v6-generic, ratatoskr-v6-neon, ratatoskr-v6-lse, ratatoskr-avx512, ratatoskr-avx2, ratatoskr-sse42, ratatoskr-generic, ratatoskr-v8.0, ratatoskr-v8.1
+Filename: pool/main/ratatoskr_6.0.0_x86_64-avx2.deb
+Size: 41325068
+MD5sum: e05854723c81d2087ab01e1aa7205fda
+SHA1: fcffcc00144ef1b783e649ea2c0e400e43301967
+SHA256: 8ca43dc49f71906db8bcd6a369a1153f28ea7bb9c9fb15617f7a2e401805f0d7
 Section: base
 Priority: optional
-Description: The service is a connector between nodes
+Description: The service is a reverse proxy
  The Ratatoskr allows managing your traffic transparently with(-out)
  applying an encryption. For example you have a personal http-site
  and you want to have an access to it through https/tls-technologies.
  The app can give you power to do this. All of you have to do is
  setting up it to a server/VPS and configuring of routes.
 
-Package: ratatoskr-avx512
-Version: 5.1.25
+Package: ratatoskr-v6-avx512
+Version: 6.0.0
 Architecture: amd64
 Maintainer: Natsuru <natsuru-san@mail.com>
-Installed-Size: 108944
-Depends: libc6 (>= 2.31), zlib1g (>= 1:1.2.11)
-Conflicts: ratatoskr-avx2, ratatoskr-sse42, ratatoskr-generic, ratatoskr-v8.0, ratatoskr-v8.1
-Filename: pool/main/ratatoskr_5.1.25_x86_64-avx512.deb
-Size: 41210632
-MD5sum: a4403dd631d3cdc91a860d89712ab519
-SHA1: bb0d51661793fdfb480c9f84d90f801ccfefa0df
-SHA256: 4b888da8937b3d6df5ac54c3b10c6886fdc62a4dd284dd86a12b6d0296335cc6
+Installed-Size: 109328
+Depends: libc6 (>= 2.35), zlib1g (>= 1:1.2.11)
+Conflicts: ratatoskr-v6-avx2, ratatoskr-v6-sse42, ratatoskr-v6-generic, ratatoskr-v6-neon, ratatoskr-v6-lse, ratatoskr-avx512, ratatoskr-avx2, ratatoskr-sse42, ratatoskr-generic, ratatoskr-v8.0, ratatoskr-v8.1
+Filename: pool/main/ratatoskr_6.0.0_x86_64-avx512.deb
+Size: 41371044
+MD5sum: 56fc0dc647c0d6b62a79caf21a3da10e
+SHA1: 2afc1df96a3aa484bd5f2b567133425e59979d7a
+SHA256: 365d7df0e8f7a00ba33af120caa56c95a451a932f98bceb519c08e070b5d7c8d
 Section: base
 Priority: optional
-Description: The service is a connector between nodes
+Description: The service is a reverse proxy
  The Ratatoskr allows managing your traffic transparently with(-out)
  applying an encryption. For example you have a personal http-site
  and you want to have an access to it through https/tls-technologies.
  The app can give you power to do this. All of you have to do is
  setting up it to a server/VPS and configuring of routes.
 
-Package: ratatoskr-generic
-Version: 5.1.25
+Package: ratatoskr-v6-generic
+Version: 6.0.0
 Architecture: amd64
 Maintainer: Natsuru <natsuru-san@mail.com>
-Installed-Size: 108376
-Depends: libc6 (>= 2.31), zlib1g (>= 1:1.2.11)
-Conflicts: ratatoskr-avx512, ratatoskr-avx2, ratatoskr-sse42, ratatoskr-v8.0, ratatoskr-v8.1
-Filename: pool/main/ratatoskr_5.1.25_x86_64-generic.deb
-Size: 40927548
-MD5sum: 7f41c2ce13c7b802c393d1d5e936c179
-SHA1: 71a53791d5d21f40a90596004ae3b44b58cd4253
-SHA256: a26b85c78a4f462a383b64edc0d496228dfba11ba16beb3b0b5edd63f68e2f1d
+Installed-Size: 108816
+Depends: libc6 (>= 2.35), zlib1g (>= 1:1.2.11)
+Conflicts: ratatoskr-v6-avx512, ratatoskr-v6-avx2, ratatoskr-v6-sse42, ratatoskr-v6-neon, ratatoskr-v6-lse, ratatoskr-avx512, ratatoskr-avx2, ratatoskr-sse42, ratatoskr-generic, ratatoskr-v8.0, ratatoskr-v8.1
+Filename: pool/main/ratatoskr_6.0.0_x86_64-generic.deb
+Size: 41033394
+MD5sum: e3dc136a045c07f0fc728adc8638ce3a
+SHA1: 96366e686a3be708073635bed5fd2096c67b85d3
+SHA256: f3a7aab4e975b4b5e9c8a42405ce47190ed83dd19992e95b7ec14fe966225235
 Section: base
 Priority: optional
-Description: The service is a connector between nodes
+Description: The service is a reverse proxy
  The Ratatoskr allows managing your traffic transparently with(-out)
  applying an encryption. For example you have a personal http-site
  and you want to have an access to it through https/tls-technologies.
  The app can give you power to do this. All of you have to do is
  setting up it to a server/VPS and configuring of routes.
 
-Package: ratatoskr-sse42
-Version: 5.1.25
-Architecture: amd64
-Maintainer: Natsuru <natsuru-san@mail.com>
-Installed-Size: 108552
-Depends: libc6 (>= 2.31), zlib1g (>= 1:1.2.11)
-Conflicts: ratatoskr-avx512, ratatoskr-avx2, ratatoskr-generic, ratatoskr-v8.0, ratatoskr-v8.1
-Filename: pool/main/ratatoskr_5.1.25_x86_64-sse42.deb
-Size: 40996634
-MD5sum: 5cdcf823bea276b4da29e1acc147f904
-SHA1: 6d99082f8f12df6be43544f0fd28acf57f649bf6
-SHA256: ba3d4e0300e01985d97c1414ee275fa7703bc0958f52aa0f3e5340435cd80520
-Section: base
-Priority: optional
-Description: The service is a connector between nodes
- The Ratatoskr allows managing your traffic transparently with(-out)
- applying an encryption. For example you have a personal http-site
- and you want to have an access to it through https/tls-technologies.
- The app can give you power to do this. All of you have to do is
- setting up it to a server/VPS and configuring of routes.
-
-Package: ratatoskr-v8.0
-Version: 5.1.25
+Package: ratatoskr-v6-lse
+Version: 6.0.0
 Architecture: arm64
 Maintainer: Natsuru <natsuru-san@mail.com>
-Installed-Size: 102863
-Depends: libc6 (>= 2.31), zlib1g (>= 1:1.2.11)
-Conflicts: ratatoskr-avx512, ratatoskr-avx2, ratatoskr-sse42, ratatoskr-generic, ratatoskr-v8.1
-Filename: pool/main/ratatoskr_5.1.25_aarch64-generic.deb
-Size: 39115322
-MD5sum: b8112dac6d72531d56b18ef1ec13927d
-SHA1: 05b1ed5bd56d91140d85dc46de6fd90b267f5335
-SHA256: f14ecdaf6b835d485ec5505d16d9050f83b24eb43c98f2b2451cb56a566b6afa
+Installed-Size: 102992
+Depends: libc6 (>= 2.35), zlib1g (>= 1:1.2.11)
+Conflicts: ratatoskr-v6-avx512, ratatoskr-v6-avx2, ratatoskr-v6-sse42, ratatoskr-v6-generic, ratatoskr-v6-neon, ratatoskr-avx512, ratatoskr-avx2, ratatoskr-sse42, ratatoskr-generic, ratatoskr-v8.0, ratatoskr-v8.1
+Filename: pool/main/ratatoskr_6.0.0_aarch64-lse.deb
+Size: 39159824
+MD5sum: e24bf65a064dd80285042b901a0e9720
+SHA1: 880bcd3efe9df80214a5c3208abd1c1dde882460
+SHA256: 1e28ceba625ce24d83651534f5f7a30624a36bc16303317b7e703c8a85e75485
 Section: base
 Priority: optional
-Description: The service is a connector between nodes
+Description: The service is a reverse proxy
  The Ratatoskr allows managing your traffic transparently with(-out)
  applying an encryption. For example you have a personal http-site
  and you want to have an access to it through https/tls-technologies.
  The app can give you power to do this. All of you have to do is
  setting up it to a server/VPS and configuring of routes.
 
-Package: ratatoskr-v8.1
-Version: 5.1.25
+Package: ratatoskr-v6-neon
+Version: 6.0.0
 Architecture: arm64
 Maintainer: Natsuru <natsuru-san@mail.com>
-Installed-Size: 102799
-Depends: libc6 (>= 2.31), zlib1g (>= 1:1.2.11)
-Conflicts: ratatoskr-avx512, ratatoskr-avx2, ratatoskr-sse42, ratatoskr-generic, ratatoskr-v8.0
-Filename: pool/main/ratatoskr_5.1.25_aarch64-8.1.deb
-Size: 39071050
-MD5sum: cd22ecf45bdcdaadebfb2198112864ac
-SHA1: f66bf1265295e6f78e42e2384a45c9e0b72218ac
-SHA256: 07f594b1225e70a3e37e92b2d43d64dd657dd003a888900e965b0c40133ba8fa
+Installed-Size: 103120
+Depends: libc6 (>= 2.35), zlib1g (>= 1:1.2.11)
+Conflicts: ratatoskr-v6-avx512, ratatoskr-v6-avx2, ratatoskr-v6-sse42, ratatoskr-v6-generic, ratatoskr-v6-lse, ratatoskr-avx512, ratatoskr-avx2, ratatoskr-sse42, ratatoskr-generic, ratatoskr-v8.0, ratatoskr-v8.1
+Filename: pool/main/ratatoskr_6.0.0_aarch64-neon.deb
+Size: 39218030
+MD5sum: 691ceae1e57142c3e9cde7e4b949a21b
+SHA1: 8a3914b68a3d97bdb25fcedab7824a28312dc4da
+SHA256: b3dab67f48c13847efa8ec985ef2c7a0524edb356575b4783fbd134431e681da
 Section: base
 Priority: optional
-Description: The service is a connector between nodes
+Description: The service is a reverse proxy
+ The Ratatoskr allows managing your traffic transparently with(-out)
+ applying an encryption. For example you have a personal http-site
+ and you want to have an access to it through https/tls-technologies.
+ The app can give you power to do this. All of you have to do is
+ setting up it to a server/VPS and configuring of routes.
+
+Package: ratatoskr-v6-sse42
+Version: 6.0.0
+Architecture: amd64
+Maintainer: Natsuru <natsuru-san@mail.com>
+Installed-Size: 109008
+Depends: libc6 (>= 2.35), zlib1g (>= 1:1.2.11)
+Conflicts: ratatoskr-v6-avx512, ratatoskr-v6-avx2, ratatoskr-v6-generic, ratatoskr-v6-neon, ratatoskr-v6-lse, ratatoskr-avx512, ratatoskr-avx2, ratatoskr-sse42, ratatoskr-generic, ratatoskr-v8.0, ratatoskr-v8.1
+Filename: pool/main/ratatoskr_6.0.0_x86_64-sse42.deb
+Size: 41089644
+MD5sum: aad9ec6c5c1b132d7930617da121695c
+SHA1: 50997a34355535748636695d2b7485abd71a8d56
+SHA256: 16556873509f3630ea8d783622543ef142663ad5fdeead581712e798f55bb256
+Section: base
+Priority: optional
+Description: The service is a reverse proxy
  The Ratatoskr allows managing your traffic transparently with(-out)
  applying an encryption. For example you have a personal http-site
  and you want to have an access to it through https/tls-technologies.
