@@ -3,29 +3,41 @@
 
   The configuration begins from the root object named `ratatoskr` which is an object. The block contains next elements:
 
-  | Parameter | Type   | Example value | Description                                                                        |
-  |-----------|--------|---------------|------------------------------------------------------------------------------------|
-  | licence   | string | PERSONAL      | The valid license encoded as a Base64-string                                       |
-  | banner    | bool   | true/false    | The switcher is appearing or hiding the ratatoskr logo at the application start    |
-  | db        | object |               | The block of a database configuration                                              |
-  | logger    | object |               | Telegram params for alerting important events                                      |
+  | Parameter | Type   | Example value | Description                                                                     |
+  |-----------|--------|---------------|---------------------------------------------------------------------------------|
+  | licence   | string | PERSONAL      | The valid license encoded as a Base64-string                                    |
+  | banner    | bool   | true/false    | The switcher is appearing or hiding the ratatoskr logo at the application start |
+  | db        | object |               | The block of a database configuration                                           |
+  | alerts    | object |               | Alerting params for important events                                            |
 
   A **`db`** bloch has these elements:
 
-  | Parameter  | Type   | Example value                                                         | Description                                                                                                                  |
-  |------------|--------|-----------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
-  | enabled    | bool   | false                                                                 | Enables or disables the DB-features. If enabled the `routes` will be ignored                                                 |
-  | unitName   | string | My unit                                                               | Describes a unit name from a *unit* table to getting necessary configuration linked to the unit name                         |
-  | url        | string | jdbc:postgresql://host:5432/applications?currentSchema=ratatoskr_test | A postgres url for connecting for your Postgres database                                                                     |
-  | login      | string | user_login                                                            | Database login                                                                                                               |
-  | password   | string | pAsSwOrD                                                              | Database password. Note, you should avoid passwords with brackets or special symbols because the app is not tested with them |
+  | Parameter   | Type          | Example value                                                         | Description                                                                                                                  |
+  |-------------|---------------|-----------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
+  | enabled     | bool          | false                                                                 | Enables or disables the DB-features. If enabled the `routes` will be ignored                                                 |
+  | unitName    | string        | My unit                                                               | Describes a unit name from a *unit* table to getting necessary configuration linked to the unit name                         |
+  | url         | string        | jdbc:postgresql://host:5432/applications?currentSchema=ratatoskr_test | A postgres url for connecting for your Postgres database                                                                     |
+  | login       | string        | user_login                                                            | Database login                                                                                                               |
+  | password    | string        | pAsSwOrD                                                              | Database password. Note, you should avoid passwords with brackets or special symbols because the app is not tested with them |
+  | hikariPool  | unsigned int  | 5                                                                     | Database pool size. Usually 1-2 connections are enough                                                                       |
 
-  A **`logger`** block has next parameters:
+  A **`alerts`** block has next parameters:
 
-  | Parameter | Type   | Example value | Description                                                                                                    |
-  |-----------|--------|---------------|----------------------------------------------------------------------------------------------------------------|
-  | token     | string | 123456789     | The Telegram token for a bot to sending alerts. If emply the Telegram alerting will be disabled                |
-  | chatId    | string | 54321         | The Telegram chat id for a channel where alerts are collected. If emply the Telegram alerting will be disabled |
+  | Parameter       | Type         | Example value              | Description                                                                                                            |
+  |-----------------|--------------|----------------------------|------------------------------------------------------------------------------------------------------------------------|
+  | telegram        | object       |                            | The Telegram block with token and chat id for a bot to sending alerts. If emply the Telegram alerting will be disabled |
+  | spreadType      | string       | none                       | Type of alerting. Available options are 'telegram', 'rest' or 'none'                                                   |
+  | alertSuccessful | bool         | true                       | Enables successful connections alerts                                                                                  |
+  | url             | string       | `http://exapmle.com/alert` | URL for the 'rest' alerting. Doesn't have any influence if user chose 'telegram' or 'none'                             |
+  | template        | string       | { %s }                     | A user defined template with '%s' for custom alerting                                                                  |
+  | bufferSize      | unsigned int | 100                        | The buffer size for alerts                                                                                             |
+
+  A **`telegram`** block has next parameters:
+
+  | Parameter | Type   | Example value | Description                                                                                                      |
+  |-----------|--------|---------------|------------------------------------------------------------------------------------------------------------------|
+  | token     | string | 123456789     | The Telegram token for a bot to sending alerts. If emply the Telegram alerting will be disabled                  |
+  | chatId    | string | 54321         | The Telegram chat id for a channel where alerts are collected. If emply the Telegram alerting will be disabled   |
 
   A **`routes`** block has next parameters:
 
@@ -33,7 +45,6 @@
   |-------------|--------------|---------------|-------------------------------------------------------------------------------------------------|
   | name        | string       | MySiteName    | The name of route                                                                               |
   | poolSize    | unsigned int | 20            | Max count of virtual threads which the route can maintain                                       |
-  | useSystemCa | bool         | true          | Setting the system CA authorities as trusted                                                    |
   | gateway     | object       |               | The block describes a server which listens a port and receives connections                      |
   | target      | object       |               | The block describes a target destination where the received from gateway traffic will be routed |
 
@@ -57,10 +68,11 @@
 
   Both of a gateway and target blocks have a **`keystore`** block:
 
-  | Parameter | Type   | Example value                               | Description                                                            |
-  |-----------|--------|---------------------------------------------|------------------------------------------------------------------------|
-  | path      | string | /home/natsuru/Desktop/ssl/certs/natsuru.p12 | The path to a PKCS12-keystore which contains certificate chain and key |
-  | pass      | string | qwerty1234                                  | The password for the given keystore and for a key inside the keystore  |
+  | Parameter | Type   | Example value                           | Description                        |
+  |-----------|--------|-----------------------------------------|------------------------------------|
+  | caChain   | string | /home/natsuru/Desktop/ssl/certs/ca.pem  | The path to a certificate chain    |
+  | tls       | string | /home/natsuru/Desktop/ssl/certs/tls.pem | The path to a user certificate     |
+  | key       | string | /home/natsuru/Desktop/ssl/certs/key.pem | The path to a user certificate key |
 
   The gateway block contains a **`tls`** block describing TLS-mode:
 

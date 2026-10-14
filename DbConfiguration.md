@@ -3,12 +3,17 @@
 
   The configuration is the same as YAML and describes by tables rolled from the Liquibase. First table is `unit`:
 
-  | Column            | Type        | Example value | Description                                                                                                                                                                          |
-  |-------------------|-------------|---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-  | name              | VARCHAR(64) | My unit       | Describes a unit name to getting necessary configuration linked to the unit name. Note, the name must be equal with `ratatoskr.db.unitName` value otherwise the config won't be work |
-  | licence           | TEXT        | PERSONAL      | The valid license encoded as a Base64-string                                                                                                                                         |
-  | messenger_token   | TEXT        | 123456789     | The Telegram token for a bot to sending alerts. If emply the Telegram alerting will be disabled                                                                                      |
-  | messenger_chat_id | TEXT        | 54321         | The Telegram chat id for a channel where alerts are collected. If emply the Telegram alerting will be disabled                                                                       |
+  | Column                 | Type          | Example value              | Description                                                                                                                                                                          |
+  |------------------------|---------------|----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+  | name                   | VARCHAR(64)   | My unit                    | Describes a unit name to getting necessary configuration linked to the unit name. Note, the name must be equal with `ratatoskr.db.unitName` value otherwise the config won't be work |
+  | licence                | TEXT          | PERSONAL                   | The valid license encoded as a Base64-string                                                                                                                                         |
+  | alert_telegram_token   | TEXT          | 123456789                  | The Telegram token for a bot to sending alerts. If emply the Telegram alerting will be disabled                                                                                      |
+  | alert_telegram_chat_id | TEXT          | 54321                      | The Telegram chat id for a channel where alerts are collected. If emply the Telegram alerting will be disabled                                                                       |
+  | alert_successful       | BOOL          | TRUE                       | Enables successful connections alerts                                                                                                                                                |
+  | alert_rest_template    | TEXT          | { %s }                     | A user defined template with '%s' for custom alerting                                                                                                                                |
+  | alert_spread_type      | VARCHAR(8)    | telegram                   | Type of alerting. Available options are 'telegram', 'rest' or 'none'                                                                                                                 |
+  | alert_rest_url         | VARCHAR(4096) | `http://exapmle.com/alert` | URL for the 'rest' alerting. Doesn't have any influence if user chose 'telegram' or 'none'                                                                                           |
+  | alert_buffer_size      | INT           | 100                        | The buffer size for alerts                                                                                                                                                           |
 
   A **`route`** table has next columns:
 
@@ -28,15 +33,15 @@
   | target_host         | TEXT        | 192.168.0.1   | IP-address or hostname of target server or machine                                                       |
   | target_keystore_id  | INT         | 1             | The link to an id column of the `keystore` table for target TLS connections                              |
   | target_tls_enabled  | BOOL        | TRUE          | Enable or disable TLS-mode with target server or machine                                                 |
-  | useSystemCa         | bool        | true          | Setting the system CA authorities as trusted                                                             |
 
   A **`keystore`** table has next columns:
 
-  | Column      | Type  | Example value                                    | Description                                                                 |
-  |-------------|-------|--------------------------------------------------|-----------------------------------------------------------------------------|
-  | description | TEXT  | My keystore for a connecting with my wifi-router | The description field and doesn't impact to work                            |
-  | content     | TEXT  | uPbDUVzb6Omrj4IEtOqAwJ0CAicQ                     | The Base64-encoded PKSC12-keystore which contains certificate chain and key |
-  | password    | TEXT  | qwerty1234                                       | The password for the given keystore and for a key inside the keystore       |
+  | Column          | Type  | Example value                                    | Description                                                                 |
+  |-----------------|-------|--------------------------------------------------|-----------------------------------------------------------------------------|
+  | description     | TEXT  | My keystore for a connecting with my wifi-router | The description field and doesn't impact to work                            |
+  | ca_chain        | TEXT  | PEM-content of CA-chain                          | The Base64-encoded PKSC12-keystore which contains certificate chain and key |
+  | tls_certificate | TEXT  | User certificate                                 | The password for the given keystore and for a key inside the keystore       |
+  | tls_key         | TEXT  | User key for certificate                         | The password for the given keystore and for a key inside the keystore       |
 
   A **`filter`** table has next columns:
 

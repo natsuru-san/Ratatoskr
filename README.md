@@ -43,7 +43,7 @@ The installation is easy and can be performed by the bellow commands:
 curl -fsSL https://natsuru-san.github.io/Ratatoskr/natsuru-public-keyring.gpg | sudo gpg --dearmor -o /etc/apt/keyrings/natsuru-public-keyring.gpg
 echo "deb [signed-by=/etc/apt/keyrings/natsuru-public-keyring.gpg] https://natsuru-san.github.io/Ratatoskr stable main" | sudo tee /etc/apt/sources.list.d/ratatoskr-repository.list
 sudo apt update
-sudo apt install ratatoskr-avx2
+sudo apt install ratatoskr-v6-avx2
 
 ```
 
@@ -51,10 +51,10 @@ Full list of available package is there:
 
 **x86_64:**
 
-- `ratatoskr-avx512` (Xeon 6700P, Ryzen EPYC 9005)
-- `ratatoskr-avx2` (Intel Core 4-14 gen)
-- `ratatoskr-sse42` (Intel Core 1-3 gen)
-- `ratatoskr-generic` (Intel Core2Duo)
+- `ratatoskr-v6-avx512` (Xeon 6700P, Ryzen EPYC 9005)
+- `ratatoskr-v6-avx2` (Intel Core 4-14 gen)
+- `ratatoskr-v6-sse42` (Intel Core 1-3 gen)
+- `ratatoskr-v6-generic` (Intel Core2Duo)
 
 **ARM64**
 

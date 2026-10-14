@@ -3,11 +3,11 @@
 ### 0. First setup
 a) Before some actions the user have to load the Ratatoskr package from the [release page](https://github.com/natsuru-san/Ratatoskr/releases) in depend on CPU-architecture of a goal-machine (arm or x86). The setting up is easy and a command above is enough:
 
-  * root@machine:#~`dpkg -i ratatoskr_5.1.*`
+  * root@machine:#~`dpkg -i ratatoskr*`
 
     or
 
-  * root@machine:#~`apt install ./ratatoskr_5.1.*`
+  * root@machine:#~`apt install ./ratatoskr*`
 
   Since an installation moment you may run it as a service using the command:
 
@@ -85,10 +85,6 @@ The app also contains util functions are helping configuration setting. The list
 * **Hardware SHA256 printer** shows an identifier encoded into the sha256 string (the real HWID won't be printed!):
 
   `ratatoskr --print-hardware-id`
-
-* **Keystore encoder** prints a base64 string to the adding it in the database column "*keystore.content*":
-
-  `ratatoskr --get-encoded-keystore /path/to/keystore.p12`
 
 ### 4. Certificate generating
 

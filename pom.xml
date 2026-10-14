@@ -6,7 +6,7 @@
 
     <groupId>karelia.natsuru</groupId>
     <artifactId>ratatoskr.db</artifactId>
-    <version>5.1.10</version>
+    <version>6.0.0</version>
 
     <properties>
         <maven.compiler.source>25</maven.compiler.source>
