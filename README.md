@@ -58,8 +58,8 @@ Full list of available package is there:
 
 **ARM64**
 
-- `ratatoskr-v8.1` (Raspberry Pi 5)
-- `ratatoskr-v8.0` (Raspberry Pi 1-4)
+- `ratatoskr-v6-lse` (Raspberry Pi 5)
+- `ratatoskr-v6-neon` (Raspberry Pi 1-4)
 
 ---
 
