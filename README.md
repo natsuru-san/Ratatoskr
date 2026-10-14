@@ -64,7 +64,7 @@ Full list of available package is there:
 ---
 
 ## 📋 Requirements
-* **Operating System:** Ubuntu 20.04 or newer or Debian.
+* **Operating System:** Ubuntu 22.04 or newer or Debian.
 * **Architecture:** x86_64 or ARM64.
 * **Zero Dependencies:** Distributed as a standalone compiled native binary. No JRE/JDK installation is required on the host machine.
 * **RAM:** 134 Mb minimum requires to run (highly recommended to add '-XX:ParallelGCThreads=1' if your system has 512 mb or less).
