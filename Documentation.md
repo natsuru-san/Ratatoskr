@@ -45,7 +45,7 @@ The database configuration is dynamic and may be set on the air. In enabled db c
 a) The first step is the rolling Liquibase scripts. Before rolling set up necessary packages:
 `sudo apt install git maven openjdk-25-jre`.
 
-b) After installation clone this repository by using the command `git clone https://github.com/natsuru-san/Ratatoskr.git` and `cd Ratatoskr` after the previous. Note, the repository contains the only one branch with actual Liquibase scripts for the newest version. For previous versions of the repo you may look for source code on the release page.
+b) After installation clone this repository by using the command `git clone --single-branch --branch main https://github.com/natsuru-san/Ratatoskr.git` and `cd Ratatoskr` after the previous. Note, the repository contains the only one branch with actual Liquibase scripts for the newest version. For previous versions of the repo you may look for source code on the release page.
 
 c) Define values for variables and perform them:
 
@@ -73,7 +73,7 @@ e) To use the configuration you must set db-params to the "*/etc/ratatoskr.yaml*
   * *ratatoskr.db.login*
   * *ratatoskr.db.password*
 
-f) Fill tables with data. All tables are an analog of the YAML-configuration and its describe in [DbConfiguration.md](DbConfiguration.md) as a reference.
+f) Fill tables with data. All tables are an analog of the YAML-configuration and its describe in [DbConfiguration.md](DbConfiguration.md) as a reference. Note, the proxy supports dynamic routes update from a database only through a putting, removing or renaming records in the route table. Simple changes in the table like changing port the update won't be had any influence. In other words, if you have erased or added some route the proxy will receive updates and apply them. But if you only have changed a port the update will be invisible until the app reboots. The behavior will be improved in the near future for tracking any changes.
 
 ### 3. Commandline arguments
 The app also contains util functions are helping configuration setting. The list of arguments are being go to replenish in the near future.
