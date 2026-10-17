@@ -17,24 +17,25 @@ References:
 * **Unlimited quantity of routes:** Yaml-config or db-table may contain routes as many as the OS allows to occupy ports.
 * **On-line configurable:** Db-config allows to add or delete your routes on the fly without using the SSH connection. The proxy receives updates from a database every minute and applies changes if existed.
 * **Pure TLS 1.3 Architecture:** Native and strict support for TLS 1.3 across all encrypted channels.
-* **Flexible Cryptography Topologies:** Encryption can be terminated at the gateway, enforced at the client side, or applied simultaneously using distinct PKCS#12 (`.p12`) identity stores.
+* **Flexible Cryptography Topologies:** Encryption can be terminated at the gateway, enforced at the client side, or applied simultaneously using distinct PEM-certificates (`.pem` and `.key`) identity stores.
 * **Broad Cryptographic Support:** Compatible with **RSA**, **Prime-curve (ECDSA)**, and modern **Ed25519** keys.
 * **Dual-Engine Configuration:** Manage your routing via declarative `YAML` file for static setups, or drive it dynamically via a **PostgreSQL** database.
 * **Instant Monitoring:** Built-in integration with **Telegram Bot API** for real-time alerting, health checks, and system notifications.
+* **Integrity check:** Self-checking of the executable file throughout all life cycle. Any modification of the executable breaks performing that will show you if your machine is compromised.
 
 ## 🦾 Quick start
 
 Firstly you have to determine which CPU's instructions are supported by your target server. Perform the `cat /proc/cpuinfo | grep -E 'avx512|avx2|sse4_2'` on the target machine.
 
-* If the terminal output includes the **avx512** text you will be able to run an any x86_64 package. Note in this case, the *ratatoskr-avx512* package will work faster than the other variants.
-* If your terminal displayed **avx2** and **sse4_2** all x86_64 packages are available except *ratatoskr-avx512*. The *ratatoskr-avx2* package will work faster than the other variants.
-* If you see the only **sse4_2** you will be able to use the only two variants: *ratatoskr-sse42* or *ratatoskr-generic*. Of course the *ratatoskr-sse42* is the better package in the case.
+* If the terminal output includes the **avx512** text you will be able to run an any x86_64 package. Note in this case, the *ratatoskr-v6-avx512* package will work faster than the other variants.
+* If your terminal displayed **avx2** and **sse4_2** all x86_64 packages are available except *ratatoskr-v6-avx512*. The *ratatoskr-v6-avx2* package will work faster than the other variants.
+* If you see the only **sse4_2** you will be able to use the only two variants: *ratatoskr-v6-sse42* or *ratatoskr-v6-generic*. Of course the *ratatoskr-v6-sse42* is the better package in the case.
 * If you haven't seen any instructions in output from the command your CPU is obsolete and the generic package is available to your target machine. Other packages won't be to work.
 
 For aarch64 CPUs you have to execute this `cat /proc/cpuinfo | grep -E 'atomics|lse'` command.
 
-* If you see the **atomics** or **lse** both ARM packages are available to you. The *ratatoskr-v8.1* will be the better choice.
-* If you haven't seen any highlighted string your target CPU is the base variant of the ARM with 64-bits. Use the *ratatoskr-v8.0*.
+* If you see the **atomics** or **lse** both ARM packages are available to you. The *ratatoskr-v6-lse* will be the better choice.
+* If you haven't seen any highlighted string your target CPU is the neon variant of the ARM with 64-bits. Use the *ratatoskr-v6-neon*.
 
 The installation is easy and can be performed by the bellow commands:
 
@@ -73,7 +74,7 @@ Full list of available package is there:
 * **Database Engine:** PostgreSQL 13+ (Required only if using dynamic database-driven configuration instead of YAML).
    * *Note:* To usage a database use the command `mvn liquibase:update` with prepared environment variables (see [doc](Documentation.md)).
 * **Alerting:** A valid Telegram Bot Token and Chat ID (Required only for real-time alerting integration).
-* **Cryptographic Materials:** Valid PKCS#12 (`.p12`) bundles containing your RSA, Prime, or Ed25519 keys for TLS 1.3 operations.
+* **Cryptographic Materials:** Valid PEM (`.pem`) files containing your RSA, Prime, or Ed25519 keys for TLS 1.3 operations.
 
 ---
 
