@@ -29,7 +29,7 @@ References:
 The installation is easy and can be performed by the bellow command:
 
 ```bash
-curl -fsSL https://github.com/natsuru-san/Ratatoskr/blob/main/install.sh | bash
+curl -fsSL https://natsuru-san.github.io/Ratatoskr/install.sh | bash
 ```
 
 Full list of available package is there:
