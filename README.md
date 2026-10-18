@@ -26,26 +26,11 @@ References:
 
 ## 🦾 Quick start
 
-Firstly you have to determine which CPU's instructions are supported by your target server. Perform the `cat /proc/cpuinfo | grep -E 'avx512|avx2|sse4_2'` on the target machine.
-
-* If the terminal output includes the **avx512** text you will be able to run an any x86_64 package. Note in this case, the *ratatoskr-v6-avx512* package will work faster than the other variants.
-* If your terminal displayed **avx2** and **sse4_2** all x86_64 packages are available except *ratatoskr-v6-avx512*. The *ratatoskr-v6-avx2* package will work faster than the other variants.
-* If you see the only **sse4_2** you will be able to use the only two variants: *ratatoskr-v6-sse42* or *ratatoskr-v6-generic*. Of course the *ratatoskr-v6-sse42* is the better package in the case.
-* If you haven't seen any instructions in output from the command your CPU is obsolete and the generic package is available to your target machine. Other packages won't be to work.
-
-For aarch64 CPUs you have to execute this `cat /proc/cpuinfo | grep -E 'atomics|lse'` command.
-
-* If you see the **atomics** or **lse** both ARM packages are available to you. The *ratatoskr-v6-lse* will be the better choice.
-* If you haven't seen any highlighted string your target CPU is the neon variant of the ARM with 64-bits. Use the *ratatoskr-v6-neon*.
-
-The installation is easy and can be performed by the bellow commands:
+The installation is easy and can be performed by the bellow command:
 
 ```
 
-curl -fsSL https://natsuru-san.github.io/Ratatoskr/natsuru-public-keyring.gpg | sudo gpg --dearmor -o /etc/apt/keyrings/natsuru-public-keyring.gpg
-echo "deb [signed-by=/etc/apt/keyrings/natsuru-public-keyring.gpg] https://natsuru-san.github.io/Ratatoskr stable main" | sudo tee /etc/apt/sources.list.d/ratatoskr-repository.list
-sudo apt update
-sudo apt install ratatoskr-v6-avx2
+curl -fsSL https://github.com/natsuru-san/Ratatoskr/blob/main/install.sh | bash
 
 ```
 
