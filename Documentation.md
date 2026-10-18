@@ -43,27 +43,34 @@ To use the kind of configuration you have to edit the file using the command **`
 The database configuration is dynamic and may be set on the air. In enabled db connection the Ratatoskr uses to checking database for new routes every minute. If it discovers changes it apply new configuration immediately. In this configuration a fallback mode is available. If the database connection is lost for a long time the next restart won't crash the app because the last info about routes and their params was saved to an encrypted file "*/usr/lib/ratatoskr/fallback.rfc*" and it will read the file. The RFC-file also contains keystores and passwords which can't be ejected from it.
 
 a) The first step is the rolling Liquibase scripts. Before rolling set up necessary packages:
-`sudo apt install git maven openjdk-25-jre`.
+```bash
+sudo apt install git maven openjdk-25-jre
+```
 
-b) After installation clone this repository by using the command `git clone --single-branch --branch main https://github.com/natsuru-san/Ratatoskr.git` and `cd Ratatoskr` after the previous. Note, the repository contains the only one branch with actual Liquibase scripts for the newest version. For previous versions of the repo you may look for source code on the release page.
+b) After installation clone this repository by using the command:
+```bash
+git clone --single-branch --branch main https://github.com/natsuru-san/Ratatoskr.git
+cd Ratatoskr
+```
+Note, the repository contains the only one branch with actual Liquibase scripts for the newest version. For previous versions of the repo you may look for source code on the release page.
 
 c) Define values for variables and perform them:
 
-`export DB_LIQUI_HOST="192.168.0.255"`
-
-`export DB_LIQUI_PORT="5432"`
-
-`export DB_LIQUI_NAME="my_db"`
-
-`export DB_LIQUI_USER="my_user"`
-
-`export DB_LIQUI_PASSWORD="mYpAsSwOrD"`
-
-`export DB_LIQUI_SCHEMA="my_schema"`
+```bash
+export DB_LIQUI_HOST="192.168.0.255"
+export DB_LIQUI_PORT="5432"
+export DB_LIQUI_NAME="my_db"
+export DB_LIQUI_USER="my_user"
+export DB_LIQUI_PASSWORD="mYpAsSwOrD"
+export DB_LIQUI_SCHEMA="my_schema"
+```
 
   * Note the database user must have rights to create, alter and delete tables!
 
-d) Perform the command: `mvn liquibase:update`.
+d) Perform the command:
+```bash
+mvn liquibase:update
+```
 
 e) To use the configuration you must set db-params to the "*/etc/ratatoskr.yaml*":
 
@@ -80,11 +87,15 @@ The app also contains util functions are helping configuration setting. The list
 
 * **Reference command** shows help page:
 
-  `ratatoskr --help`
+```bash
+ratatoskr --help
+```
 
 * **Hardware SHA256 printer** shows an identifier encoded into the sha256 string (the real HWID won't be printed!):
 
-  `ratatoskr --print-hardware-id`
+```bash
+ratatoskr --print-hardware-id
+```
 
 ### 4. Certificate generating
 
