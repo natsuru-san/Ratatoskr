@@ -1,25 +1,29 @@
 # Documentation aka user tutorial (v.6)
 
 ### 0. First setup
-a) Before some actions the user have to load the Ratatoskr package from the [release page](https://github.com/natsuru-san/Ratatoskr/releases) in depend on CPU-architecture of a goal-machine (arm or x86). The setting up is easy and a command above is enough:
+a) Before some actions the user have to set up the Ratatoskr repository:
 
-  * root@machine:#~`dpkg -i ratatoskr*`
-
-    or
-
-  * root@machine:#~`apt install ./ratatoskr*`
+  ```bash
+  curl -fsSL https://natsuru-san.github.io/Ratatoskr/install.sh | bash
+  ```
 
   Since an installation moment you may run it as a service using the command:
-
-  * root@machine:#~`service ratatoskr start`
+  
+  ```bash
+  service ratatoskr start
+  ```
 
   After performing the daemon is working with a single route given as an example in `/etc/ratatoskr.yaml`. The logging of the work you may see through the command:
 
-  * root@machine:#~`journalctl -u ratatoskr`
+  ```bash
+  journalctl -u ratatoskr
+  ```
 
   or if in real time
 
-  * root@machine:#~`journalctl -u ratatoskr -f`
+  ```bash
+  journalctl -u ratatoskr -f
+  ```
 
 b) Next step is a configuring JVM args located in the path "*/usr/lib/ratatoskr/ratatoskr.args*" inside a variable "*JVM_ARGS*".
 
