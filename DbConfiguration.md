@@ -14,6 +14,9 @@
   | alert_spread_type      | VARCHAR(8)    | telegram                   | Type of alerting. Available options are 'telegram', 'rest' or 'none'                                                                                                                 |
   | alert_rest_url         | VARCHAR(4096) | `http://exapmle.com/alert` | URL for the 'rest' alerting. Doesn't have any influence if user chose 'telegram' or 'none'                                                                                           |
   | alert_buffer_size      | INT           | 100                        | The buffer size for alerts                                                                                                                                                           |
+  | graceful_time_seconds  | INT           | 60                         | The time in seconds for graceful shutdown of route. If the time is exceeded the route termination will be forcible                                                                   |
+  | server_port            | INT           | 8080                       | A builtin http-server port for metrics or database changes applying                                                                                                                  |
+  | auto_apply_minutes     | INT           | 10                         | A database changes auto applying time in minutes. If the time reached the app is going to receive and apply changes automaticly. Ignores for yaml-config                             |
 
   A **`route`** table has next columns:
 

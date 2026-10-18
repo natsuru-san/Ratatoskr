@@ -3,12 +3,15 @@
 
   The configuration begins from the root object named `ratatoskr` which is an object. The block contains next elements:
 
-  | Parameter | Type   | Example value | Description                                                                     |
-  |-----------|--------|---------------|---------------------------------------------------------------------------------|
-  | licence   | string | PERSONAL      | The valid license encoded as a Base64-string                                    |
-  | banner    | bool   | true/false    | The switcher is appearing or hiding the ratatoskr logo at the application start |
-  | db        | object |               | The block of a database configuration                                           |
-  | alerts    | object |               | Alerting params for important events                                            |
+  | Parameter           | Type         | Example value | Description                                                                                                                                              |
+  |---------------------|--------------|---------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
+  | licence             | string       | PERSONAL      | The valid license encoded as a Base64-string                                                                                                             |
+  | banner              | bool         | true/false    | The switcher is appearing or hiding the ratatoskr logo at the application start                                                                          |
+  | gracefulTimeSeconds | unsigned int | 60            | The time in seconds for graceful shutdown of route. If the time is exceeded the route termination will be forcible                                       |
+  | serverPort          | unsigned int | 8080          | A builtin http-server port for metrics or database changes applying                                                                                      |
+  | autoApplyMinutes    | unsigned int | 10            | A database changes auto applying time in minutes. If the time reached the app is going to receive and apply changes automaticly. Ignores for yaml-config |
+  | db                  | object       |               | The block of a database configuration                                                                                                                    |
+  | alerts              | object       |               | Alerting params for important events                                                                                                                     |
 
   A **`db`** bloch has these elements:
 

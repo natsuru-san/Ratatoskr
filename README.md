@@ -22,6 +22,7 @@ References:
 * **Dual-Engine Configuration:** Manage your routing via declarative `YAML` file for static setups, or drive it dynamically via a **PostgreSQL** database.
 * **Instant Monitoring:** Built-in integration with **Telegram Bot API** for real-time alerting, health checks, and system notifications.
 * **Integrity check:** Self-checking of the executable file throughout all life cycle. Any modification of the executable breaks performing that will show you if your machine is compromised.
+* **Metrics:** Use the monitoring throughout `/metrics` endpoint in the Prometheus format. The result may be used in Grafana UI.
 
 ## 🦾 Quick start
 
