@@ -1,15 +1,15 @@
 Package: ratatoskr-v6-avx2
-Version: 6.0.0
+Version: 6.1.0
 Architecture: amd64
 Maintainer: Natsuru <natsuru-san@mail.com>
-Installed-Size: 109072
+Installed-Size: 120533
 Depends: libc6 (>= 2.35), zlib1g (>= 1:1.2.11)
 Conflicts: ratatoskr-v6-avx512, ratatoskr-v6-sse42, ratatoskr-v6-generic, ratatoskr-v6-neon, ratatoskr-v6-lse, ratatoskr-avx512, ratatoskr-avx2, ratatoskr-sse42, ratatoskr-generic, ratatoskr-v8.0, ratatoskr-v8.1
-Filename: pool/main/ratatoskr_6.0.0_x86_64-avx2.deb
-Size: 41325068
-MD5sum: e05854723c81d2087ab01e1aa7205fda
-SHA1: fcffcc00144ef1b783e649ea2c0e400e43301967
-SHA256: 8ca43dc49f71906db8bcd6a369a1153f28ea7bb9c9fb15617f7a2e401805f0d7
+Filename: pool/main/ratatoskr_6.1.0_x86_64-avx2.deb
+Size: 46219334
+MD5sum: f701c470c81a6c7593c24f7cf9c31c18
+SHA1: f61d4a0818415675f6ba4e8b890eb973c0f84990
+SHA256: 6891dc45df27d4bed5cef28b75a883177ecc700576378a82ffe607a5d37a615b
 Section: base
 Priority: optional
 Description: The service is a reverse proxy
@@ -20,17 +20,17 @@ Description: The service is a reverse proxy
  setting up it to a server/VPS and configuring of routes.
 
 Package: ratatoskr-v6-avx512
-Version: 6.0.0
+Version: 6.1.0
 Architecture: amd64
 Maintainer: Natsuru <natsuru-san@mail.com>
-Installed-Size: 109328
+Installed-Size: 120789
 Depends: libc6 (>= 2.35), zlib1g (>= 1:1.2.11)
 Conflicts: ratatoskr-v6-avx2, ratatoskr-v6-sse42, ratatoskr-v6-generic, ratatoskr-v6-neon, ratatoskr-v6-lse, ratatoskr-avx512, ratatoskr-avx2, ratatoskr-sse42, ratatoskr-generic, ratatoskr-v8.0, ratatoskr-v8.1
-Filename: pool/main/ratatoskr_6.0.0_x86_64-avx512.deb
-Size: 41371044
-MD5sum: 56fc0dc647c0d6b62a79caf21a3da10e
-SHA1: 2afc1df96a3aa484bd5f2b567133425e59979d7a
-SHA256: 365d7df0e8f7a00ba33af120caa56c95a451a932f98bceb519c08e070b5d7c8d
+Filename: pool/main/ratatoskr_6.1.0_x86_64-avx512.deb
+Size: 46242376
+MD5sum: a9d136820f29b68a3039916041f1b39f
+SHA1: 78623c8e8f4c7a6ef13f655dbecee2ab359d7ebb
+SHA256: 864b3bd16beeafdaecc625efc0506f4d4562c6e15c1d534988f2e3caec79e1e4
 Section: base
 Priority: optional
 Description: The service is a reverse proxy
@@ -41,17 +41,17 @@ Description: The service is a reverse proxy
  setting up it to a server/VPS and configuring of routes.
 
 Package: ratatoskr-v6-generic
-Version: 6.0.0
+Version: 6.1.0
 Architecture: amd64
 Maintainer: Natsuru <natsuru-san@mail.com>
-Installed-Size: 108816
+Installed-Size: 120277
 Depends: libc6 (>= 2.35), zlib1g (>= 1:1.2.11)
 Conflicts: ratatoskr-v6-avx512, ratatoskr-v6-avx2, ratatoskr-v6-sse42, ratatoskr-v6-neon, ratatoskr-v6-lse, ratatoskr-avx512, ratatoskr-avx2, ratatoskr-sse42, ratatoskr-generic, ratatoskr-v8.0, ratatoskr-v8.1
-Filename: pool/main/ratatoskr_6.0.0_x86_64-generic.deb
-Size: 41033394
-MD5sum: e3dc136a045c07f0fc728adc8638ce3a
-SHA1: 96366e686a3be708073635bed5fd2096c67b85d3
-SHA256: f3a7aab4e975b4b5e9c8a42405ce47190ed83dd19992e95b7ec14fe966225235
+Filename: pool/main/ratatoskr_6.1.0_x86_64-generic.deb
+Size: 45890204
+MD5sum: f477cfb089b73cbaa9e8d3e13504a3c7
+SHA1: 35fdf7cbd49dbea5a581dc1949d7104877055d2f
+SHA256: 89d3530746f8bb179fe12ed867a267dee1f1847801eebfaf8c7b08436e1bafa9
 Section: base
 Priority: optional
 Description: The service is a reverse proxy
@@ -62,17 +62,17 @@ Description: The service is a reverse proxy
  setting up it to a server/VPS and configuring of routes.
 
 Package: ratatoskr-v6-lse
-Version: 6.0.0
+Version: 6.1.0
 Architecture: arm64
 Maintainer: Natsuru <natsuru-san@mail.com>
-Installed-Size: 102992
+Installed-Size: 114069
 Depends: libc6 (>= 2.35), zlib1g (>= 1:1.2.11)
 Conflicts: ratatoskr-v6-avx512, ratatoskr-v6-avx2, ratatoskr-v6-sse42, ratatoskr-v6-generic, ratatoskr-v6-neon, ratatoskr-avx512, ratatoskr-avx2, ratatoskr-sse42, ratatoskr-generic, ratatoskr-v8.0, ratatoskr-v8.1
-Filename: pool/main/ratatoskr_6.0.0_aarch64-lse.deb
-Size: 39159824
-MD5sum: e24bf65a064dd80285042b901a0e9720
-SHA1: 880bcd3efe9df80214a5c3208abd1c1dde882460
-SHA256: 1e28ceba625ce24d83651534f5f7a30624a36bc16303317b7e703c8a85e75485
+Filename: pool/main/ratatoskr_6.1.0_aarch64-lse.deb
+Size: 43794966
+MD5sum: 35236aec4e3138218000200110ee6d60
+SHA1: 0fda6c7fb152687d9dd9f736892e557cee7346f4
+SHA256: 1111044596c9c65f268c9348af904470a39681d73f84f63b9f2a7ac4525b71f6
 Section: base
 Priority: optional
 Description: The service is a reverse proxy
@@ -83,17 +83,17 @@ Description: The service is a reverse proxy
  setting up it to a server/VPS and configuring of routes.
 
 Package: ratatoskr-v6-neon
-Version: 6.0.0
+Version: 6.1.0
 Architecture: arm64
 Maintainer: Natsuru <natsuru-san@mail.com>
-Installed-Size: 103120
+Installed-Size: 114197
 Depends: libc6 (>= 2.35), zlib1g (>= 1:1.2.11)
 Conflicts: ratatoskr-v6-avx512, ratatoskr-v6-avx2, ratatoskr-v6-sse42, ratatoskr-v6-generic, ratatoskr-v6-lse, ratatoskr-avx512, ratatoskr-avx2, ratatoskr-sse42, ratatoskr-generic, ratatoskr-v8.0, ratatoskr-v8.1
-Filename: pool/main/ratatoskr_6.0.0_aarch64-neon.deb
-Size: 39218030
-MD5sum: 691ceae1e57142c3e9cde7e4b949a21b
-SHA1: 8a3914b68a3d97bdb25fcedab7824a28312dc4da
-SHA256: b3dab67f48c13847efa8ec985ef2c7a0524edb356575b4783fbd134431e681da
+Filename: pool/main/ratatoskr_6.1.0_aarch64-neon.deb
+Size: 43856644
+MD5sum: f07c4b0592b71f08e60399ece8bdc72e
+SHA1: 566af2fc5b8bb96e7e66fd5ecf6b368fdaa6f1d6
+SHA256: 605a2c5b0650ae81580fc018d925ad0fba3ea337e2d4cda72d548bec151fa902
 Section: base
 Priority: optional
 Description: The service is a reverse proxy
@@ -104,17 +104,17 @@ Description: The service is a reverse proxy
  setting up it to a server/VPS and configuring of routes.
 
 Package: ratatoskr-v6-sse42
-Version: 6.0.0
+Version: 6.1.0
 Architecture: amd64
 Maintainer: Natsuru <natsuru-san@mail.com>
-Installed-Size: 109008
+Installed-Size: 120405
 Depends: libc6 (>= 2.35), zlib1g (>= 1:1.2.11)
 Conflicts: ratatoskr-v6-avx512, ratatoskr-v6-avx2, ratatoskr-v6-generic, ratatoskr-v6-neon, ratatoskr-v6-lse, ratatoskr-avx512, ratatoskr-avx2, ratatoskr-sse42, ratatoskr-generic, ratatoskr-v8.0, ratatoskr-v8.1
-Filename: pool/main/ratatoskr_6.0.0_x86_64-sse42.deb
-Size: 41089644
-MD5sum: aad9ec6c5c1b132d7930617da121695c
-SHA1: 50997a34355535748636695d2b7485abd71a8d56
-SHA256: 16556873509f3630ea8d783622543ef142663ad5fdeead581712e798f55bb256
+Filename: pool/main/ratatoskr_6.1.0_x86_64-sse42.deb
+Size: 45925546
+MD5sum: 57ab0dc92195e84f7c12e23a802a4b86
+SHA1: a6b733f55c041a1d77b5eac7d28db8047572dfdc
+SHA256: ff2617a0c404242b2761a4363ecb07f0a1fc182630cdea83835e199d51d7e089
 Section: base
 Priority: optional
 Description: The service is a reverse proxy
