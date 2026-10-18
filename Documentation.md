@@ -1,4 +1,4 @@
-# Documentation aka user tutorial (v.5)
+# Documentation aka user tutorial (v.6)
 
 ### 0. First setup
 a) Before some actions the user have to load the Ratatoskr package from the [release page](https://github.com/natsuru-san/Ratatoskr/releases) in depend on CPU-architecture of a goal-machine (arm or x86). The setting up is easy and a command above is enough:
