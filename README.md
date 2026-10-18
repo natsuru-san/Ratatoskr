@@ -28,7 +28,7 @@ References:
 
 The installation is easy and can be performed by the bellow command:
 
-```
+```bash
 curl -fsSL https://github.com/natsuru-san/Ratatoskr/blob/main/install.sh | bash
 ```
 
