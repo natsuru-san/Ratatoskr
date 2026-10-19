@@ -44,7 +44,7 @@ b) Next step is a configuring JVM args located in the path "*/usr/lib/ratatoskr/
 To use the kind of configuration you have to edit the file using the command **`nano /etc/ratatoskr.yaml`** for your needs. A description of elements you may see in [YamlConfiguration.md](YamlConfiguration.md).
 
 ### 2. Database configuration
-The database configuration is dynamic and may be set on the air. In enabled db connection the Ratatoskr uses to checking database for new routes every minute. If it discovers changes it apply new configuration immediately. In this configuration a fallback mode is available. If the database connection is lost for a long time the next restart won't crash the app because the last info about routes and their params was saved to an encrypted file "*/usr/lib/ratatoskr/fallback.rfc*" and it will read the file. The RFC-file also contains keystores and passwords which can't be ejected from it.
+The database configuration is dynamic and may be set on the air. In enabled db connection the Ratatoskr uses to checking database for every period in minutes defined by user. If it discovers changes it apply new configuration when checks or by user command (see the serverPort setting and use endpoint `/db/apply`). In this configuration a fallback mode is available. If the database connection is lost for a long time the next restart won't crash the app because the last info about routes and their params was saved to an encrypted file "*/usr/lib/ratatoskr/fallback.rfc*" and it will read the file. The RFC-file also contains keystores and passwords which can't be ejected from it.
 
 a) The first step is the rolling Liquibase scripts. Before rolling set up necessary packages:
 ```bash
@@ -84,7 +84,7 @@ e) To use the configuration you must set db-params to the "*/etc/ratatoskr.yaml*
   * *ratatoskr.db.login*
   * *ratatoskr.db.password*
 
-f) Fill tables with data. All tables are an analog of the YAML-configuration and its describe in [DbConfiguration.md](DbConfiguration.md) as a reference. Note, the proxy supports dynamic routes update from a database only through a putting, removing or renaming records in the route table. Simple changes in the table like changing port the update won't be had any influence. In other words, if you have erased or added some route the proxy will receive updates and apply them. But if you only have changed a port the update will be invisible until the app reboots. The behavior will be improved in the near future for tracking any changes.
+f) Fill tables with data. All tables are an analog of the YAML-configuration and its describe in [DbConfiguration.md](DbConfiguration.md) as a reference. Note, the proxy tracks changes from a database and applies it by user command (see the serverPort setting and use endpoint `/db/apply`) or periodically by the *autoApplyMinutes* setting.
 
 ### 3. Commandline arguments
 The app also contains util functions are helping configuration setting. The list of arguments are being go to replenish in the near future.
