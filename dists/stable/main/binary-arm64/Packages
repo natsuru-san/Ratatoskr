@@ -1,15 +1,15 @@
 Package: ratatoskr-v6-avx2
-Version: 6.1.0
+Version: 6.1.1
 Architecture: amd64
 Maintainer: Natsuru <natsuru-san@mail.com>
 Installed-Size: 120533
 Depends: libc6 (>= 2.35), zlib1g (>= 1:1.2.11)
 Conflicts: ratatoskr-v6-avx512, ratatoskr-v6-sse42, ratatoskr-v6-generic, ratatoskr-v6-neon, ratatoskr-v6-lse, ratatoskr-avx512, ratatoskr-avx2, ratatoskr-sse42, ratatoskr-generic, ratatoskr-v8.0, ratatoskr-v8.1
-Filename: pool/main/ratatoskr_6.1.0_x86_64-avx2.deb
-Size: 46219334
-MD5sum: f701c470c81a6c7593c24f7cf9c31c18
-SHA1: f61d4a0818415675f6ba4e8b890eb973c0f84990
-SHA256: 6891dc45df27d4bed5cef28b75a883177ecc700576378a82ffe607a5d37a615b
+Filename: pool/main/ratatoskr_6.1.1_x86_64-avx2.deb
+Size: 46182626
+MD5sum: 4b5f1fdf91a4b9d6a89e1a1cf8983e1c
+SHA1: c37907c035f59bfd8150d7ae8625ec73ee1ccbca
+SHA256: b98cf21405a54f42793ea1b0c7db3ff009461318c50ed0ca9e1d4a6a1a7d297f
 Section: base
 Priority: optional
 Description: The service is a reverse proxy
@@ -20,17 +20,17 @@ Description: The service is a reverse proxy
  setting up it to a server/VPS and configuring of routes.
 
 Package: ratatoskr-v6-avx512
-Version: 6.1.0
+Version: 6.1.1
 Architecture: amd64
 Maintainer: Natsuru <natsuru-san@mail.com>
 Installed-Size: 120789
 Depends: libc6 (>= 2.35), zlib1g (>= 1:1.2.11)
 Conflicts: ratatoskr-v6-avx2, ratatoskr-v6-sse42, ratatoskr-v6-generic, ratatoskr-v6-neon, ratatoskr-v6-lse, ratatoskr-avx512, ratatoskr-avx2, ratatoskr-sse42, ratatoskr-generic, ratatoskr-v8.0, ratatoskr-v8.1
-Filename: pool/main/ratatoskr_6.1.0_x86_64-avx512.deb
-Size: 46242376
-MD5sum: a9d136820f29b68a3039916041f1b39f
-SHA1: 78623c8e8f4c7a6ef13f655dbecee2ab359d7ebb
-SHA256: 864b3bd16beeafdaecc625efc0506f4d4562c6e15c1d534988f2e3caec79e1e4
+Filename: pool/main/ratatoskr_6.1.1_x86_64-avx512.deb
+Size: 46236880
+MD5sum: 73eb5803df67f0fd71aafa4586311012
+SHA1: b44e3f7e2194fed0237bc0965e7fa2d59e143375
+SHA256: 941cde99b3990604d91d23d858ca591ff611c62127e86acb4261279b5ea667f5
 Section: base
 Priority: optional
 Description: The service is a reverse proxy
@@ -41,17 +41,17 @@ Description: The service is a reverse proxy
  setting up it to a server/VPS and configuring of routes.
 
 Package: ratatoskr-v6-generic
-Version: 6.1.0
+Version: 6.1.1
 Architecture: amd64
 Maintainer: Natsuru <natsuru-san@mail.com>
 Installed-Size: 120277
 Depends: libc6 (>= 2.35), zlib1g (>= 1:1.2.11)
 Conflicts: ratatoskr-v6-avx512, ratatoskr-v6-avx2, ratatoskr-v6-sse42, ratatoskr-v6-neon, ratatoskr-v6-lse, ratatoskr-avx512, ratatoskr-avx2, ratatoskr-sse42, ratatoskr-generic, ratatoskr-v8.0, ratatoskr-v8.1
-Filename: pool/main/ratatoskr_6.1.0_x86_64-generic.deb
-Size: 45890204
-MD5sum: f477cfb089b73cbaa9e8d3e13504a3c7
-SHA1: 35fdf7cbd49dbea5a581dc1949d7104877055d2f
-SHA256: 89d3530746f8bb179fe12ed867a267dee1f1847801eebfaf8c7b08436e1bafa9
+Filename: pool/main/ratatoskr_6.1.1_x86_64-generic.deb
+Size: 45930978
+MD5sum: fa0de7d9f03c90b91df864c95e85f03e
+SHA1: a0190579953ce4fa664dc396566b79e1997c727e
+SHA256: 859aee24bafea27fc93e19f8ab4029910772fc8b79cb1802e695f20caf12cf74
 Section: base
 Priority: optional
 Description: The service is a reverse proxy
@@ -62,17 +62,17 @@ Description: The service is a reverse proxy
  setting up it to a server/VPS and configuring of routes.
 
 Package: ratatoskr-v6-lse
-Version: 6.1.0
+Version: 6.1.1
 Architecture: arm64
 Maintainer: Natsuru <natsuru-san@mail.com>
 Installed-Size: 114069
 Depends: libc6 (>= 2.35), zlib1g (>= 1:1.2.11)
 Conflicts: ratatoskr-v6-avx512, ratatoskr-v6-avx2, ratatoskr-v6-sse42, ratatoskr-v6-generic, ratatoskr-v6-neon, ratatoskr-avx512, ratatoskr-avx2, ratatoskr-sse42, ratatoskr-generic, ratatoskr-v8.0, ratatoskr-v8.1
-Filename: pool/main/ratatoskr_6.1.0_aarch64-lse.deb
-Size: 43794966
-MD5sum: 35236aec4e3138218000200110ee6d60
-SHA1: 0fda6c7fb152687d9dd9f736892e557cee7346f4
-SHA256: 1111044596c9c65f268c9348af904470a39681d73f84f63b9f2a7ac4525b71f6
+Filename: pool/main/ratatoskr_6.1.1_aarch64-lse.deb
+Size: 43858962
+MD5sum: 5238964bc1e627c8f94ab2d106d033b8
+SHA1: ecee2c24ec818fb68b831256fc53f1b5800be6e1
+SHA256: 0eede44d8b98c2fff1c35ece2df18b367d13fd1110c15c2cdd9f3bc5ab39ab19
 Section: base
 Priority: optional
 Description: The service is a reverse proxy
@@ -83,17 +83,17 @@ Description: The service is a reverse proxy
  setting up it to a server/VPS and configuring of routes.
 
 Package: ratatoskr-v6-neon
-Version: 6.1.0
+Version: 6.1.1
 Architecture: arm64
 Maintainer: Natsuru <natsuru-san@mail.com>
 Installed-Size: 114197
 Depends: libc6 (>= 2.35), zlib1g (>= 1:1.2.11)
 Conflicts: ratatoskr-v6-avx512, ratatoskr-v6-avx2, ratatoskr-v6-sse42, ratatoskr-v6-generic, ratatoskr-v6-lse, ratatoskr-avx512, ratatoskr-avx2, ratatoskr-sse42, ratatoskr-generic, ratatoskr-v8.0, ratatoskr-v8.1
-Filename: pool/main/ratatoskr_6.1.0_aarch64-neon.deb
-Size: 43856644
-MD5sum: f07c4b0592b71f08e60399ece8bdc72e
-SHA1: 566af2fc5b8bb96e7e66fd5ecf6b368fdaa6f1d6
-SHA256: 605a2c5b0650ae81580fc018d925ad0fba3ea337e2d4cda72d548bec151fa902
+Filename: pool/main/ratatoskr_6.1.1_aarch64-neon.deb
+Size: 43892682
+MD5sum: 8bbf30a677b0110caa570cfc4ea81ef6
+SHA1: 90d256d1dfb8fa310a0c16dbaa49226f429af7c6
+SHA256: b182a39bcb8d928eadcd89c25fbb0137b24d3fa5e44c924a1834696c9c8329aa
 Section: base
 Priority: optional
 Description: The service is a reverse proxy
@@ -104,17 +104,17 @@ Description: The service is a reverse proxy
  setting up it to a server/VPS and configuring of routes.
 
 Package: ratatoskr-v6-sse42
-Version: 6.1.0
+Version: 6.1.1
 Architecture: amd64
 Maintainer: Natsuru <natsuru-san@mail.com>
 Installed-Size: 120405
 Depends: libc6 (>= 2.35), zlib1g (>= 1:1.2.11)
 Conflicts: ratatoskr-v6-avx512, ratatoskr-v6-avx2, ratatoskr-v6-generic, ratatoskr-v6-neon, ratatoskr-v6-lse, ratatoskr-avx512, ratatoskr-avx2, ratatoskr-sse42, ratatoskr-generic, ratatoskr-v8.0, ratatoskr-v8.1
-Filename: pool/main/ratatoskr_6.1.0_x86_64-sse42.deb
-Size: 45925546
-MD5sum: 57ab0dc92195e84f7c12e23a802a4b86
-SHA1: a6b733f55c041a1d77b5eac7d28db8047572dfdc
-SHA256: ff2617a0c404242b2761a4363ecb07f0a1fc182630cdea83835e199d51d7e089
+Filename: pool/main/ratatoskr_6.1.1_x86_64-sse42.deb
+Size: 45927646
+MD5sum: ae8b5ef47a4412edcf6c4911e5ea4af8
+SHA1: 5c46efe245834b5cc3eb8803d59b49d11d527656
+SHA256: 876662382d0a3c3ebbc149344337ed2d9c87797e7508768129b7b2d82ce2e1c9
 Section: base
 Priority: optional
 Description: The service is a reverse proxy
